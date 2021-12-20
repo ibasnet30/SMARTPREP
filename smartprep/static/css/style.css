@@ -3,7 +3,49 @@ body,
 input {
   font-family: "Poppins", sans-serif;
 }
+/* ------------------------------------------------------------------------------------------------------------------------ /*
+/* css for blue background seperator*/
+.section-separator {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 20px 0;
+}
+.section-separator:before{
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 0;
+	height: 3px;
+	width: 50px;
+	border-radius: 3px;
+	z-index: 2;
+	background-color: #304695;
+	margin-left: -25px;
+}
 
+/* ------------------------------------------------------------------------------------------------------------------------ /*
+/* css for white background seperator*/
+.section-separator1 {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 10px 0px;
+	margin-bottom: 30px;
+}
+.section-separator1:before{
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 0;
+	height: 3px;
+	width: 50px;
+	border-radius: 2px;
+	z-index: 2;
+	background-color: #fff;
+	margin-left: -25px;
+
+}
 
 
 /* css for header button------------------------------------------------------------------------------------------------------------------------- */
@@ -32,6 +74,455 @@ input {
     font-size: 16px;
 
   }
+/* ------------------------------------------------------------------------------------------------------------------------ /*
+/* css for video-play*/
+.video {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  overflow: hidden;
+}
+.video h1{
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: sans-serif;
+  padding-left: 300px;
+  margin-top:100px;
+  z-index: 1;
+  color: #fff;
+}
+
+.video-container{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.Core{
+    background: #304695;
+    height: 70vh;
+	position: relative;
+
+}
+.corevalues{
+    color: #fff;
+    font-size: 34px;
+	font-weight: 800;
+}
+/* ------------------------------------------------------------------------------------------------------------------------ /*
+/* css for course categories*/
+/* Browsing course categories */
+
+.categories{
+    height:50vh;
+    margin-top:100px:
+}
+
+
+
+.categories h1{
+	font-size: 34px;
+	font-weight: 800;
+	text-align: center;
+	color:#304695
+}
+.category .row{
+	padding-left: 100px;
+}
+
+.details{
+	height: 150px;
+	width: 200px;
+	margin: 10px 0;
+	padding: 30px 60px;
+	background: rgb(250, 237, 237);
+	border: 1px solid #9397a7;
+	box-sizing: border-box;
+	box-shadow: #000;
+}
+.details .fa {
+	padding-left:30px;
+}
+.details .fas {
+	padding-left:20px;
+}
+.details h2{
+	font-size:30px ;
+	margin-top: 15px;
+	padding-right: 20px;
+	text-align: center;
+
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ /*
+/* css for popular Courses*/
+.courses{
+	background: #304695;
+}
+.courses h1{
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	font-size: 34px;
+	font-weight: 800;
+	padding-bottom: 20px;
+	position: relative;
+}
+.course img{
+	margin-top: 10px;
+}
+
+.course .card-body .listing-rating{
+	margin-bottom: 5px;
+}
+
+.course .card-body .btn{
+	margin-top: 3px;
+	padding: 0%;
+	height: 30px;
+	width: 90px;
+}
+
+.course .card-body #icon{
+	font-weight: 500;
+	color: rgb(82, 80, 80);
+	margin-top: 10px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ /*
+/* css for Learning Methods*/
+.learning{
+	height: 70vh;
+	position: relative;
+
+}
+
+.learning h1{
+	font-size: 34px;
+	font-weight: 800;
+	color: #304695;
+}
+.method .row{
+	padding: 30px;
+	justify-content: space-evenly;
+}
+
+.method .row h3{
+	color: #304695;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.method .row p{
+	text-align-last: center;
+}
+/* ------------------------------------------------------------------------------------------------------------------------ /*
+/* css for Instructor*/
+.instructor{
+	background:#304695;
+	height: 85vh;
+	width: 100%;
+	position: relative;
+
+}
+.instructor h1{
+	font-size: 34px;
+	font-weight: 800;
+	text-align: center;
+	padding-top: 40px;
+	color: #fff;
+}
+.slide-row{
+	display: flex;
+	width: 3200px;
+	transition: 0.5s;
+}
+.slide-col{
+	width: 800px;
+	height: 400px;
+	position: relative;
+}
+.teacher-img{
+	position: absolute;
+	top:10%;
+	right: 25px;
+	height:100%;
+}
+.teacher-img img{
+	height: 100%;
+	border-radius: 10px;
+}
+
+.teacher-text{
+	background: #2d3a59;
+	width: 520px;
+	height: 270px;
+	position: absolute;
+	left: 0;
+	top: 55%;
+	transform: translateY(-50%);
+	border-radius:10px ;
+	color: #d3d4d6;
+	padding: 45px;
+	box-sizing: border-box;
+	z-index: 2;
+
+}
+
+.teacher-text p{
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.teacher-text h3{
+	margin: 35px 0 5px;
+	color: #fff;
+}
+
+.teachers{
+	width: 800px;
+	height: 400px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+}
+.indicator{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -50px;
+}
+.butn{
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	margin: 4px;
+	border-radius: 10px;
+	background: #fff;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.active{
+	width: 45px;
+}
+
+.teacherDetail{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ /*
+/* css for Testimonials*/
+.testimonial{
+	text-align: center;
+	float: left;
+	position: relative;
+	padding: 30px 0;
+	background: #fcfcfd;
+	z-index: 1;
+	width: 100%;
+}
+.testimonial-title{
+	float: left;
+	position: relative;
+	width: 100%;
+	padding-bottom: 40px;
+}
+.testimonial-title p{
+	color: #7d93b2;
+	font-size: 13px;
+	line-height: 20px;
+	max-width: 550px;
+	margin: 0 auto;
+}
+.testimonial-title h2 {
+	float: left;
+	width: 100%;
+	text-align: center;
+	color: #304695;
+	font-size: 34px;
+	font-weight: 800;
+	position: relative;
+}
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+.listing-carousel-button{
+	position: absolute;
+	top: 50%;
+	width: 80px;
+	height: 50px;
+	line-height: 50px;
+	margin-top: -25px;
+	z-index: 100;
+	cursor: pointer;
+	background: #007aff;
+	box-shadow: 0 9px 26px rgba(58, 87,135,0.45);
+	transition: all 200ms linear;
+	outline: none;
+}
+.listing-carousel-button.listing-carousel-button-next{
+	right: -30px;
+	padding-right: 20px;
+	border-radius: 60px 0 0 60px;
+}
+.listing-carousel-button.listing-carousel-button-prev{
+	left: -30px;
+	padding-left: 20px;
+	border-radius: 0 60px 60px 0;
+}
+.listing-carousel-button.listing-carousel-button-next:hover{
+	right: -15px;
+	background: rgba(6,27,65,0.4);
+}
+.listing-carousel-button.listing-carousel-button-prev:hover{
+	left: -15px;
+	background: rgba(6,27,65,0.4);
+}
+.testi-item {
+	transition: all .3s ease-in-out;
+	transform: scale(0.9);
+	opacity: 0.9;
+}
+.testimonials-text {
+	padding: 75px 50px 75px;
+	overflow:hidden;
+	background: #f5f6fa;
+	border:1ps solid #f1f1f1;
+	border-radius: 10px;
+	transition: all .3s ease-in-out;
+}
+.testimonials-text-after{
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	position: absolute;
+	color: #ccc;
+	opacity: .3;
+	font-size: 35px;
+	transition: all 400ms linear;
+	bottom: 25px;
+	right: 30px;
+}
+.testimonials-text-before{
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	position: absolute;
+	color: #ccc;
+	opacity: .3;
+	font-size: 35px;
+	transition: all 400ms linear;
+	top: 25px;
+	left: 30px;
+}
+.testimonials-text .listing-rating{
+	float: none;
+	display: inline-block;
+	margin-bottom: 12px;
+}
+.listing-rating i{
+	color:  goldenrod;
+}
+.testimonials-avatar h3{
+	font-weight: 600;
+	color: #7d93b2;
+	font-size: 18px;
+}
+.testimonials-avatar h4{
+	 font-weight:400;
+	 font-size:12px;
+	 padding-top:6px;
+	 color:#304695;
+}
+.testimonials-carousel .swiper-slide{
+	padding: 30px 0;
+}
+.testi-avatar{
+	position: absolute;
+	left: 50%;
+	top: -30px;
+	width: 90px;
+	height: 90px;
+	margin-left: -45px;
+	z-index: 20;
+}
+.testi-avatar img{
+	width: 90px;
+	height: 90px;
+	float: left;
+	border-radius: 100%;
+	border:6px solid #fff;
+	box-shadow: 0 9px 26px rgba(58, 87,135,0.1);
+}
+.swiper-slide-active .testimonials-text {
+	background: #fff;
+	box-shadow: 0 9px 26px rgba(58, 87,135,0.1);
+}
+.testimonials-text p{
+	color: #878c9f;
+	font-size: 14px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	line-height: 24px;
+	padding-bottom: 10px;
+	font-weight: 500;
+}
+.text-link{
+	position: absolute;
+	bottom:0;
+	padding: 15px 0;
+	border-radius: 10px 10px 0 0;
+	background: #f9f9f9;
+	border:1px solid #eee;
+	box-shadow: 0 10px 15px rgba(0,0,0,0.03);
+	left: 50%;
+	width: 200px;
+	margin-left: -100px;
+}
+.swiper-slide-active .testi-item{
+	opacity: 1;
+	transform: scale(1.0);
+}
+.tc-pagination{
+	float: left;
+	margin-top: 10px;
+	width: 100% !important;
+}
+.tc-pagination_wrap {
+	position: absolute;
+	bottom: -40px;
+	left: 0;
+	width: 100%;
+}
+.tc-pagination2{
+	float: none;
+	display: inline-block;
+	padding: 14px 0;
+	background: #fff;
+	border-radius: 30px;
+	min-width: 250px;
+	border-bottom: 0;
+}
+.tc-pagination .swiper-pagination-bullet, .tc-pagination2.swiper-pagination-bullet{
+	opacity: 1;
+	background: #304695;
+	margin:0 2px;
+	width: 10px;
+	height: 10px;
+	transition: all 300ms ease-in-out;
+}
+
+
+
 
 /* ------------------------------------------------------------------------------------------------------------------------ /*
 /* css for footer*/

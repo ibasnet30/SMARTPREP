@@ -4,51 +4,514 @@
 {% block title %}
 <title> Homepage</title>
 {% endblock title %}
-
-
-
 {% block main_content %}
 
 
+<!-- Video play and content -->
+<div class="video">
+    <h1>Learn more skills,be more Creative</h1>
+
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="{% static 'video/video.mp4' %}" type="video/mp4">
+        </video>
+    </div>
+
+</div>
 
 <!--Our Core values------------------------------------------------------------------------------------------------------------>
-<div class=" container-fluid mt-5   pt-5  pb-5 " ">
-    <div class="row d-flex bg justify-content-center">
-    <h2 id="head2" class=" corevalues pb-5 d-flex   justify-content-center">OUR CORE VALUES</h2>
-    <div class="row featurette d-flex   justify-content-center" >
-      <div class="col-md-5 " >
-          <div class="d-flex   justify-content-center pb-3" >
-                        <img class="media_thumb" src="https://s-f.scribdassets.com/images/about/01_about_D_icon_value_01_people.svg?35195d874"
-                             alt="" role="presentation">
-          </div>
-              <div class="media_text ">
-                            <h5 id="head555" class="d-flex   justify-content-center">We are characters with
-                                character.</h5>
-                            <p class="d-flex justify-content-center"><strong>People:</strong> We value people above
-                                everything else. We invest in our employees
-                                and believe that diverse stories, ideas, and talents are what make us great.</p>
-              </div>
-      </div>
-      <div class="col-md-5 pb-3">
-          <div class="d-flex   justify-content-center pb-3" >
-               <img class="media_thumb" src="https://s-f.scribdassets.com/images/about/01_about_D_icon_value_05_community.svg?35195d874"
-                             alt="" role="presentation">
-          </div>
-                        <div class="media_text">
-                        <h5 id="head5555" class="d-flex   justify-content-center">We are dedicated to
-                            helping readers flourish.</h5>
-                        <p class="d-flex justify-content-center"><strong>Community:</strong>
-                            We care deeply about our customers. Our community is the soul of
-                            the product and we work hard to understand and meet their needs.
-                        </p>
-                        </div>
-      </div>
-    </div>
-</div>
-</div>
+<!--<div class=" Core container-fluid mt-3 text-white  pt-5  pb-5">-->
+<!--    <div class="row d-flex bg justify-content-center">-->
+<!--        <h2 class=" corevalues pb-5 d-flex   justify-content-center" id="head2">OUR CORE VALUES</h2>-->
+<!--        <span class="section-separator1"></span>-->
+
+<!--        <div class="row featurette d-flex   justify-content-center">-->
+<!--            <div class="col-md-5 ">-->
+<!--                <div class="d-flex   justify-content-center pb-3">-->
+<!--                    <img alt=""-->
+<!--                         class="media_thumb"-->
+<!--                         role="presentation"-->
+<!--                         src="https://s-f.scribdassets.com/images/about/01_about_D_icon_value_01_people.svg?35195d874">-->
+<!--                </div>-->
+<!--                <div class="media_text ">-->
+<!--                    <h5 class="d-flex   justify-content-center" id="head555">We are characters with-->
+<!--                        character.</h5>-->
+<!--                    <p class="d-flex justify-content-center"><strong>People:</strong> We value people above-->
+<!--                        everything else. We invest in our employees-->
+<!--                        and believe that diverse stories, ideas, and talents are what make us great.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-5 pb-3">-->
+<!--                <div class="d-flex   justify-content-center pb-3">-->
+<!--                    <img alt=""-->
+<!--                         class="media_thumb"-->
+<!--                         role="presentation"-->
+<!--                         src="https://s-f.scribdassets.com/images/about/01_about_D_icon_value_05_community.svg?35195d874">-->
+<!--                </div>-->
+<!--                <div class="media_text">-->
+<!--                    <h5 class="d-flex   justify-content-center" id="head5555">We are dedicated to-->
+<!--                        helping readers flourish.</h5>-->
+<!--                    <p class="d-flex justify-content-center"><strong>Community:</strong>&nbsp;-->
+<!--                        We care deeply about our customers. Our community is the soul of-->
+<!--                        the product and we work hard to understand and meet their needs.-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;Top categories of Courses&ndash;&gt;-->
+<!--<div class="categories mt-5">-->
+<!--    <h1>Browse Courses By Top Categories</h1>-->
+<!--    <span class="section-separator"></span>-->
+<!--    <div class="category ">-->
+<!--        <div class="row slider">-->
+<!--            <div class="col-md-3 mt-5">-->
+<!--                <div class="details">-->
+<!--                    <i aria-hidden="true" class="fa fa-user-md fa-2x"></i>-->
+<!--                    <h2>MBBS</h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-3 mt-5">-->
+<!--                <div class="details">-->
+<!--                    <i class="fa fa-user-md fa-2x"></i>-->
+<!--                    <h2>IOE</h2>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-3 mt-5">-->
+<!--                <div class="details">-->
+<!--                    <i class="fa fa-user-md fa-2x"></i>-->
+<!--                    <h2>Nursing</h2>-->
+
+
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="col-md-3 mt-5">-->
+<!--                <div class="details">-->
+<!--                    <i class="fa fa-user-md fa-2x"></i>-->
+<!--                    <h2>CSIT</h2>-->
+
+
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</div>-->
+<!--<script>-->
+<!--    $('.slider').slick({-->
+<!--    dots: true,-->
+<!--    infinite: true,-->
+<!--    speed: 300,-->
+<!--    slidesToShow: 3,-->
+<!--    slidesToScroll: 1,-->
+<!--    responsive: [-->
+<!--    {-->
+<!--      breakpoint: 1024,-->
+<!--      settings: {-->
+<!--        slidesToShow: 3,-->
+<!--        slidesToScroll: 3,-->
+<!--        infinite: true,-->
+<!--        dots: true-->
+<!--      }-->
+<!--    },-->
+<!--    {-->
+<!--      breakpoint: 600,-->
+<!--      settings: {-->
+<!--        slidesToShow: 2,-->
+<!--        slidesToScroll: 2-->
+<!--      }-->
+<!--    },-->
+<!--    {-->
+<!--      breakpoint: 480,-->
+<!--      settings: {-->
+<!--        slidesToShow: 1,-->
+<!--        slidesToScroll: 1-->
+<!--      }-->
+<!--    }-->
+<!--    // You can unslick at a given breakpoint now by adding:-->
+<!--    // settings: "unslick"-->
+<!--    // instead of a settings object-->
+<!--    ]-->
+<!--});-->
+
+
+<!--</script>-->
+<!--&lt;!&ndash; Our Popular Courses &ndash;&gt;-->
+
+<!--<div class="courses mt-5 p-5">-->
+<!--    <h1>Some Popular Courses</h1>-->
+<!--    <span class="section-separator1"></span>-->
+
+<!--    <div class="row justify-content-around mt-4">-->
+<!--        <div class="card" style="width: 18rem;">-->
+<!--            <div class="course">-->
+<!--                <img alt="..." class="card-img-top" src="{% static 'images/nurse.jpg' %}">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Nursing</h5>-->
+<!--                    <p class="card-text">Begineer Full Course</p>-->
+<!--                    <hr>-->
+<!--                    <div class="listing-rating">4.9-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                    </div>-->
+<!--                    <i aria-hidden="true" class="fa fa-users" id="icon">&nbsp 20</i>-->
+<!--                    <a class="btn btn-outline-primary float-end" href="#">Enroll Now</a>-->
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+
+<!--        <div class="card" style="width: 18rem;">-->
+<!--            <div class="course">-->
+<!--                <img alt="..." class="card-img-top" src="{% static 'images/engi.jpg' %}">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Engineering</h5>-->
+<!--                    <p class="card-text">Begineer Full Course</p>-->
+<!--                    <hr>-->
+<!--                    <div class="listing-rating">4.0-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                    </div>-->
+<!--                    <i aria-hidden="true" class="fa fa-users" id="icon">&nbsp 20</i>-->
+<!--                    <a class="btn btn-outline-primary float-end" href="#">Enroll Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="card" style="width: 18rem;">-->
+<!--            <div class="course">-->
+<!--                <img alt="..." class="card-img-top" src="{% static 'images/engi.jpg' %}">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Engineering</h5>-->
+<!--                    <p class="card-text">Begineer Full Course</p>-->
+<!--                    <hr>-->
+<!--                    <div class="listing-rating">4.0-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                    </div>-->
+<!--                    <i aria-hidden="true" class="fa fa-users" id="icon">&nbsp 20</i>-->
+<!--                    <a class="btn btn-outline-primary float-end" href="#">Enroll Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="card" style="width: 18rem;">-->
+<!--            <div class="course">-->
+<!--                <img alt="..." class="card-img-top" src="{% static 'images/nurse.jpg' %}">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Engineering</h5>-->
+<!--                    <p class="card-text">Begineer Full Course</p>-->
+<!--                    <hr>-->
+<!--                    <div class="listing-rating">4.0-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                        <i class="fa fa-star"></i>-->
+<!--                    </div>-->
+<!--                    <i aria-hidden="true" class="fa fa-users" id="icon">&nbsp 20</i>-->
+<!--                    <a class="btn btn-outline-primary float-end" href="#">Enroll Now</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; Learning Methods &ndash;&gt;-->
+<!--<div class="container-fluid text-center mt-5 ">-->
+<!--    <div class="learning">-->
+<!--        <h1>Learning Methods</h1>-->
+<!--        <span class="section-separator"></span>-->
+<!--        <div class="method">-->
+<!--            <div class="row mt-5">-->
+<!--                <div class="col-md-3 ">-->
+<!--                    <img src="{% static 'images/test.jpg' %}">-->
+<!--                    <hr>-->
+<!--                    <h3>Online Learning</h3>-->
+<!--                    <p>Online learning known as E-learning is<br/>-->
+<!--                        completely virtual class. It provides<br/>-->
+<!--                        affordable classes for Entrance.<br/>-->
+<!--                    </p>-->
+
+<!--                </div>-->
+<!--                <div class="col-md-3 ">-->
+<!--                    <img src="{% static 'images/test1.jpg' %}">-->
+<!--                    <hr>-->
+<!--                    <h3>Weekly Online Test</h3>-->
+<!--                    <p>Smartprep allows you to take test for <br/>-->
+<!--                        more effectivness and numerous quiz <br/>-->
+<!--                        question will be available for weekly test. </p>-->
+
+<!--                </div>-->
+
+<!--                <div class="col-md-3 ">-->
+<!--                    <img src="{% static 'images/video1.jpg' %}">-->
+<!--                    <hr>-->
+<!--                    <h3>Video Learning</h3>-->
+<!--                    <p>Video learning provide better and <br/>-->
+<!--                        deeper learning experience. It allows <br/>-->
+<!--                        learner to remember and absorbs course<br/> content efficiently and easily. </p>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;Teachers Detail  &ndash;&gt;-->
+<!--<div class="instructor mt-5">-->
+<!--    <h1>Meet Our Instructor</h1>-->
+<!--    <span class="section-separator1"></span>-->
+
+<!--    <div class="teachers">-->
+<!--        <div class="indicator">-->
+<!--            <span class="butn active"></span>-->
+<!--            <span class="butn"></span>-->
+<!--            <span class="butn"></span>-->
+<!--            <span class="butn"></span>-->
+<!--        </div>-->
+<!--        <div class="teacherDetail">-->
+<!--            <div class="slide-row" id="slide">-->
+<!--                <div class="slide-col">-->
+<!--                    <div class="teacher-text">-->
+<!--                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, inventore consequatur delectus-->
+<!--                            ad aut a harum rem optio doloremque quod, necessitatibus unde ratione eum numquam-->
+<!--                            architecto, ducimus dignissimos modi. Praesentium!</p>-->
+<!--                        <h3>Manisha</h3>-->
+<!--                        <p>Science</p>-->
+<!--                    </div>-->
+<!--                    <div class="teacher-img">-->
+<!--                        <img src="{% static 'images/hero1.jpg' %}">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="slide-col">-->
+<!--                    <div class="teacher-text">-->
+<!--                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, inventore consequatur delectus-->
+<!--                            ad aut a harum rem optio doloremque quod, necessitatibus unde ratione eum numquam-->
+<!--                            architecto, ducimus dignissimos modi. Praesentium!</p>-->
+<!--                        <h3>Manisha</h3>-->
+<!--                        <p>Science</p>-->
+<!--                    </div>-->
+<!--                    <div class="teacher-img">-->
+<!--                        <img src="{% static 'images/hero3.jpg' %}">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="slide-col">-->
+<!--                    <div class="teacher-text">-->
+<!--                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, inventore consequatur delectus-->
+<!--                            ad aut a harum rem optio doloremque quod, necessitatibus unde ratione eum numquam-->
+<!--                            architecto, ducimus dignissimos modi. Praesentium!</p>-->
+<!--                        <h3>Manisha</h3>-->
+<!--                        <p>Science</p>-->
+<!--                    </div>-->
+<!--                    <div class="teacher-img">-->
+<!--                        <img src="{% static 'images/hero1.jpg' %}">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="slide-col">-->
+<!--                    <div class="teacher-text">-->
+<!--                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, inventore consequatur delectus-->
+<!--                            ad aut a harum rem optio doloremque quod, necessitatibus unde ratione eum numquam-->
+<!--                            architecto, ducimus dignissimos modi. Praesentium!</p>-->
+<!--                        <h3>Manisha</h3>-->
+<!--                        <p>Science</p>-->
+<!--                    </div>-->
+<!--                    <div class="teacher-img">-->
+<!--                        <img src="{% static 'images/hero3.jpg' %}">-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<script>-->
+<!--                var butn = document.getElementsByClassName('butn');-->
+<!--                var slide = document.getElementById("slide")-->
+
+<!--                butn[0].onclick = function(){-->
+<!--                    slide.style.transform = "translateX(0px)";-->
+<!--                    for(i=0;i<4;i++){-->
+<!--                        butn[i].classList.remove("active");-->
+<!--                    }-->
+<!--                    this.classList.add("active");-->
+<!--                }-->
+<!--                butn[1].onclick = function(){-->
+<!--                    slide.style.transform = "translateX(-800px)";-->
+<!--                    for(i=0;i<4;i++){-->
+<!--                        butn[i].classList.remove("active");-->
+<!--                    }-->
+<!--                    this.classList.add("active");-->
+<!--                }-->
+<!--                butn[2].onclick = function(){-->
+<!--                    slide.style.transform = "translateX(-1600px)";-->
+<!--                    for(i=0;i<4;i++){-->
+<!--                        butn[i].classList.remove("active");-->
+<!--                    }-->
+<!--                    this.classList.add("active");-->
+<!--                }-->
+<!--                butn[3].onclick = function(){-->
+<!--                    slide.style.transform = "translateX(-2400px)";-->
+<!--                    for(i=0;i<4;i++){-->
+<!--                        butn[i].classList.remove("active");-->
+<!--                    }-->
+<!--                    this.classList.add("active");-->
+<!--                }-->
 
 
 
+
+<!--</script>-->
+
+<!--&lt;!&ndash; Testimonials &ndash;&gt;-->
+<!--<div class="testimonial">-->
+<!--    <div class="container-fluid">-->
+<!--        <div class="testimonial-title mt-5">-->
+<!--            <h2>Testimonials</h2>-->
+<!--            <span class="section-separator"></span>-->
+<!--            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="testimonials-carousel-wrap">-->
+<!--        <div class="listing-carousel-button listing-carousel-button-next"><i class="fa fa-caret-right"-->
+<!--                                                                             style="color: #fff"></i></div>-->
+<!--        <div class="listing-carousel-button listing-carousel-button-prev"><i class="fa fa-caret-left"-->
+<!--                                                                             style="color: #fff"></i></div>-->
+<!--        <div class="testimonials-carousel">-->
+<!--            <div class="swiper-container">-->
+<!--                <div class="swiper-wrapper">-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="testi-item">-->
+<!--                            <div class="testi-avatar"><img src="{% static 'images/c2.jpg' %}"></div>-->
+<!--                            <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>-->
+<!--                            <div class="testimonials-text">-->
+<!--                                <div class="listing-rating">-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                </div>-->
+<!--                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem-->
+<!--                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an-->
+<!--                                    unknown printer took a galley of type and scrambled it to make a type specimen-->
+<!--                                    book.</p>-->
+<!--                                <a class="text-link" href="#"></a>-->
+<!--                                <div class="testimonials-avatar">-->
+<!--                                    <h3>Ishan Basnet</h3>-->
+<!--                                    <h4>Student</h4>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    &lt;!&ndash;second-&ndash;&gt;-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="testi-item">-->
+<!--                            <div class="testi-avatar"><img src="{% static 'images/c3.jpg' %}"></div>-->
+<!--                            <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>-->
+<!--                            <div class="testimonials-text">-->
+<!--                                <div class="listing-rating">-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                </div>-->
+<!--                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem-->
+<!--                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an-->
+<!--                                    unknown printer took a galley of type and scrambled it to make a type specimen-->
+<!--                                    book.</p>-->
+<!--                                <a class="text-link" href="#"></a>-->
+<!--                                <div class="testimonials-avatar">-->
+<!--                                    <h3>Sanju Maharjan</h3>-->
+<!--                                    <h4>Student</h4>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;third&ndash;&gt;-->
+
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="testi-item">-->
+<!--                            <div class="testi-avatar"><img src="{% static 'images/4.jpg' %}"></div>-->
+<!--                            <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>-->
+<!--                            <div class="testimonials-text">-->
+<!--                                <div class="listing-rating">-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                </div>-->
+<!--                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem-->
+<!--                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an-->
+<!--                                    unknown printer took a galley of type and scrambled it to make a type specimen-->
+<!--                                    book.</p>-->
+<!--                                <a class="text-link" href="#"></a>-->
+<!--                                <div class="testimonials-avatar">-->
+<!--                                    <h3>Manisha Basukala </h3>-->
+<!--                                    <h4>Student</h4>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    &lt;!&ndash;fourth&ndash;&gt;-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class="testi-item">-->
+<!--                            <div class="testi-avatar"><img src="{% static 'images/3.jpg' %}"></div>-->
+<!--                            <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>-->
+<!--                            <div class="testimonials-text">-->
+<!--                                <div class="listing-rating">-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                    <i class="fa fa-star"></i>-->
+<!--                                </div>-->
+<!--                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem-->
+<!--                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an-->
+<!--                                    unknown printer took a galley of type and scrambled it to make a type specimen-->
+<!--                                    book.</p>-->
+<!--                                <a class="text-link" href="#"></a>-->
+<!--                                <div class="testimonials-avatar">-->
+<!--                                    <h3>Ruby Kakshyapati </h3>-->
+<!--                                    <h4>Student</h4>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;testi end&ndash;&gt;-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="tc-pagination"></div>-->
+<!--    </div>-->
+<!--</div>-->
 
 
 
