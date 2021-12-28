@@ -3,6 +3,45 @@ body,
 input {
   font-family: "Poppins", sans-serif;
 }
+
+span.help-block{
+color:red
+}
+
+/*.form-group{padding:8px}
+input{width:200px}
+*/
+/* login form--------------------------------------------------------------------------------------------------------- */
+
+ .container-fluid .row  #myForml {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+width:400px;
+height:350px;
+opacity: 0.8;
+}
+
+
+
+/* registration form --------------------------------------------------------------------------------------------------------- */
+
+
+
+    #myFormR {
+ margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+width:400px;
+height:530px;
+opacity: 0.8;
+}
+
+
 /* ------------------------------------------------------------------------------------------------------------------------ /*
 /* css for blue background seperator*/
 .section-separator {
@@ -694,3 +733,5 @@ input {
       }
   }
 /* end of footer ------------------------------------------------------------------------------------------------------------------------------------------------------------------------/*
+
+

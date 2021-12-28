@@ -1,0 +1,102 @@
+{% extends 'admin-layout.html' %}
+{% load static %}
+{% block title %}
+<title>Admin-Dashboard</title>
+{% endblock %}
+{% block main_content %}
+<style>
+    .card-body a{
+    text-decoration:none;
+    color:#fff;
+    }
+
+    .card-body a:hover{
+    color:orange;
+    }
+
+</style>
+<div class="container " >
+    <div class="row text-center">
+    <h2 id="head2" class="pb-5 pt-5">Admin Dashboard</h2>
+    </div>
+    {% include 'messages.html' %}
+    <div class="row">
+
+        <div class="row ">
+        <div class="col ">
+            <div class="card text-white dash mb-3" style="max-width: 35rem; background-color:#30649C">
+                <div class="card-header text-center">Total Categories </div>
+                <div class="card-body">
+                    <a href="#"> <h1 class="dashnumber card-title text-center">{}</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+         <div class="col">
+            <div class="card text-white dash mb-3" style="max-width: 35rem; background-color:#30649C">
+                <div class="card-header text-center">Total Courses</div>
+                <div class="card-body">
+                    <a href="#"><h1 class="dashnumber card-title text-center">{}</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <div class="row ">
+        <div class="col">
+            <div class="card text-white dash mb-3" style="max-width: 35rem; background-color:#30649C">
+                <div class="card-header text-center">Total Learners</div>
+                <div class="card-body">
+                    <a href="#">
+                        <h1 class="dashnumber card-title text-center">{}</h1></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-white dash mb-3" style="max-width: 35rem; background-color:#30649C">
+                <div class="card-header text-center">Total Lecturers</div>
+                <div class="card-body">
+                    <a href="#"><h1 class="dashnumber card-title text-center">{}</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+    <div class="row ">
+        <div class="col ">
+            <div class="card text-white dash mb-3" style="max-width: 35rem; background-color:#30649C">
+                <div class="card-header text-center">Total Admins  </div>
+                <div class="card-body">
+                    <a href="#"> <h1 class="dashnumber card-title text-center">{}</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
