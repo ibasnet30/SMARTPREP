@@ -1,5 +1,21 @@
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+.main{
+margin-top:5%;
+}
 
 
 
@@ -148,7 +164,7 @@ form.sign-up-form {
 }
 
 .toggle:hover {
-  color: #E7AF36;
+  color: black;
 }
 
 .input-wrap {
@@ -212,7 +228,7 @@ label {
 }
 
 .sign-btn:hover {
-  background-color: #E7AF36;
+  background-color: #151111;
   color:#fff;
 }
 
@@ -444,6 +460,12 @@ main.sign-up-mode .carousel1 {
 
 }
 
+
+
+
+
+
+
 </style>
 
 {% extends 'layout.html' %}
@@ -458,8 +480,9 @@ main.sign-up-mode .carousel1 {
 
 {% block main_content %}
 
-<main>
-      <div class="box">
+<main class="main">
+
+    <div class="box">
         <div class="inner-box">
           <div class="forms-wrap">
             <form action="index.html" autocomplete="off" class="sign-in-form">
@@ -479,7 +502,7 @@ main.sign-up-mode .carousel1 {
 
                 <div class="centerdiv">
                  <span class="span">
-                  <img class="don" src="static/images/facebook.png" alt="easyclass" />
+                  <img class="don" src="{% static 'images/facebook.png' %}" alt="easyclass" />
                   Facebook
 
                  </span>
@@ -487,7 +510,7 @@ main.sign-up-mode .carousel1 {
 
                 <div class="centerdiv">
                   <span class="span">
-                   <img class="don" src="static/images/instragram.png" alt="easyclass" />
+                   <img class="don" src="{% static 'images/instragram.png' %}" alt="easyclass" />
                    Instagram
 
                   </span>
@@ -540,79 +563,13 @@ main.sign-up-mode .carousel1 {
                 <div class="heading">
 
                   <h6>Don't have an account?</h6>
-                  <a href="#" class="toggle">Sign Up</a>
+                  <a href="/RegisterForm" class="toggle">Sign Up</a>
                 </div>
 
 
               </div>
             </form>
 
-            <form action="index.html" autocomplete="off" class="sign-up-form">
-              <div class="logo">
-                <!-- <img src="./img/logo.png" alt="easyclass" /> -->
-                <h4>LOGO</h4>
-              </div>
-
-              <div class="heading">
-                <h2>Create Account</h2>
-
-              </div>
-
-              <div class="actual-form">
-                <div class="input-wrap">
-                  <input
-                    type="text"
-                    minlength="4"
-                    class="input-field"
-                    autocomplete="off"
-                    required
-                  />
-                  <label>Name</label>
-                </div>
-
-                <div class="input-wrap">
-                  <input
-                    type="email"
-                    class="input-field"
-                    autocomplete="off"
-                    required
-                  />
-                  <label>Email</label>
-                </div>
-
-                <div class="input-wrap">
-                  <input
-                    type="password"
-                    minlength="4"
-                    class="input-field"
-                    autocomplete="off"
-                    required
-                  />
-                  <label>Password</label>
-                </div>
-
-                <div class="input-wrap">
-                  <input
-                    type="password"
-                    minlength="4"
-                    class="input-field"
-                    autocomplete="off"
-                    required
-                  />
-                  <label>Confirm Password</label>
-                </div>
-
-                <input type="submit" value="Sign Up" class="sign-btn" />
-
-                <div class="heading">
-
-                  <h6>Already have an account?</h6>
-                  <a href="#" class="toggle">Sign In</a>
-                </div>
-
-
-              </div>
-            </form>
           </div>
 
 
@@ -620,9 +577,9 @@ main.sign-up-mode .carousel1 {
 
           <div class="carousel1">
             <div class="images-wrapper">
-              <img src="static/images/login.jpg" class="image img-1 show" alt="" />
-              <img src="static/images/login1.jpg" class="image img-2" alt="" />
-              <img src="static/images/login2.jpg" class="image img-3" alt="" />
+              <img src="{% static 'images/login.jpg' %}" class="image img-1 show" alt="" />
+              <img src="{% static 'images/login1.jpg' %}" class="image img-2" alt="" />
+              <img src="{% static 'images/login2.jpg' %}" class="image img-3" alt="" />
             </div>
 
             <div class="text-slider">
@@ -646,5 +603,50 @@ main.sign-up-mode .carousel1 {
 
         </div>
       </div>
+
+
+
     </main>
+<script>
+  const inputs = document.querySelectorAll(".input-field");
+const toggle_btn = document.querySelectorAll(".toggle");
+const main = document.querySelector("main");
+const bullets = document.querySelectorAll(".bullets span");
+const images = document.querySelectorAll(".image");
+
+inputs.forEach((inp) => {
+  inp.addEventListener("focus", () => {
+    inp.classList.add("active");
+  });
+  inp.addEventListener("blur", () => {
+    if (inp.value != "") return;
+    inp.classList.remove("active");
+  });
+});
+
+toggle_btn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    main.classList.toggle("sign-up-mode");
+  });
+});
+
+function moveSlider() {
+  let index = this.dataset.value;
+
+  let currentImage = document.querySelector(`.img-${index}`);
+  images.forEach((img) => img.classList.remove("show"));
+  currentImage.classList.add("show");
+
+  const textSlider = document.querySelector(".text-group");
+  textSlider.style.transform = `translateY(${-(index - 1) * 2.2}rem)`;
+
+  bullets.forEach((bull) => bull.classList.remove("active"));
+  this.classList.add("active");
+}
+
+bullets.forEach((bullet) => {
+  bullet.addEventListener("click", moveSlider);
+});
+
+</script>
 {% endblock main_content %}

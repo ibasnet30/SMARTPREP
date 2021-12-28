@@ -2,8 +2,40 @@
 body,
 input {
   font-family: "Poppins", sans-serif;
+
+
 }
 
+
+/* css for header*/
+nav a{
+    text-decoration: none;
+    color:#30649C
+}
+nav a:hover{
+    color:rgba(34,54,69,.7);
+    font-weight: bold;
+
+}
+nav .nav-item a{
+    text-decoration: none;
+    color:rgba(34,54,69,.7)
+}
+nav .nav-item a:hover{
+    color:#30649C
+
+}
+
+.navbar-brand{
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+
+}
+.navbar-expand-lg .navbar-nav .nav-link.active{
+    /* border-bottom:2px solid #30649C; */
+    color:#30649C;
+   font-weight: bold;
+}
 
 
 /* css for header button------------------------------------------------------------------------------------------------------------------------- */
@@ -32,6 +64,27 @@ input {
     font-size: 16px;
 
   }
+
+
+  /* css for heading */
+  .heading1{
+    text-align: center;
+
+
+
+}
+.heading1 span{
+    font-size:30px;
+    background: rgba(101, 115, 182, 0.2);
+    color:#30649C;
+    border-radius: .5rem;
+    padding: .2rem 1rem;
+    font-weight: bold;
+
+}
+.heading1 span.space{
+    background:none;
+}
 
 /* ------------------------------------------------------------------------------------------------------------------------ /*
 /* css for footer*/
@@ -202,4 +255,343 @@ input {
 
       }
   }
-/* end of footer ------------------------------------------------------------------------------------------------------------------------------------------------------------------------/*
+/* end of footer */
+
+
+
+
+/* ---------------contact form-------------- */
+
+
+.contact-form{
+    padding: 2rem 0;
+    /* border-top: 1px solid #c7c7c7;
+    border-bottom: 1px solid #c7c7c7; */
+
+
+  }
+  .contact-form form{
+    padding-bottom: 1rem;
+  }
+  .form-control{
+
+    border: 1.5px solid #c7c7c7;
+    border-radius: 5px;
+    padding: 0.7rem;
+    margin: 0.7rem 3rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    outline: 0;
+  }
+  .form-control:focus{
+    box-shadow: 0 0 6px -3px rgba(48, 48, 48, 1);
+  }
+  .contact-form form div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.6rem;
+  }
+  .send-btn{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: #30649C;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-left: 7%;
+  }
+  .send-btn:hover{
+    opacity: 0.8;
+  }
+  .contact-form > div img{
+    width: 70%;
+  }
+  .contact-form > div{
+    margin: 0 auto;
+    text-align: center;
+  }
+
+
+
+
+
+  @media screen and (min-width: 992px){
+
+    .contact-form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+
+  }
+
+  /* css for contact info*/
+  .contact-section{
+      margin-top: 5%;
+  }
+
+.contact-body{
+    max-width:1320px;
+
+    padding: 0 1rem;
+    }
+
+
+    .contact-info{
+    margin:2rem 0;
+    text-align:center;
+    padding:2rem 0;
+    }
+    .contact-info span{
+    display:block;
+    }
+    .contact-info div{
+    margin:0.8rem 0;
+    padding:1rem
+    }
+
+
+    .contact-info span .fa{
+    font-size:30px;
+    padding-bottom:0.9rem;
+    color:#30649C;
+    }
+    .contact-info div span:nth-child(2){
+    font-weight:500;
+    font-size:1.1rem;
+
+    }
+    .contact-info .text{
+    padding-top:0.4rem;
+    }
+    .contact-form{
+    padding:2rem 0;
+    }
+    .text1{
+        color:#666
+    }
+
+
+    @media screen and (min-width:768px){
+    .contact-info{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    }
+    }
+
+    @media screen and (min-width:1200px){
+    .contact-info{
+    grid-template-columns:repeat(4, 1fr);
+    }
+    }
+
+
+
+    /* -----------------css for corousel--------------- */
+    .about .carousel-item{
+      min-height: 65vh;
+      background-position: center;
+      background-size: cover;
+
+
+  }
+
+
+  .about .carousel-item::before{
+      content: '';
+      position: absolute;
+      left:0;
+      top:0;
+      width:100%;
+      height:100%;
+      background-color: rgba(73, 108, 204, 0.5)
+  }
+  .about .carousel-controls{
+
+      position:absolute;
+      left:50%;
+      bottom:40px;
+      z-index: 10;
+      transform: translateX(-50%);
+
+
+
+  }
+  .about .carousel-indicators{
+      position:relative;
+      margin:0;
+
+  }
+  .about .carousel-indicators button{
+      height:60px;
+      width:60px;
+      margin:0 5px;
+      border-radius:50%;
+      background-position: center;
+      background-size: cover;
+      border:3px solid transparent;
+      transition: all 0.3s ease;
+
+
+  }
+  .about .carousel-indicators button.active{
+      border-color: white;
+      transform:scale(1.2);
+  }
+
+
+
+
+/* ---------------css for header button------------------------*/
+
+
+.button{
+
+  width: 105px;
+  height: 43px;
+  background-color: #30649C;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+
+}
+
+.button:hover{
+
+    width: 105px;
+    height: 43px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+
+  }
+
+
+
+
+
+  /* --------about page (our story)----- */
+  .ourstory{
+      margin-top:5%;
+  }
+
+  .story{
+      margin-top:6%;
+      margin-left: 20%;
+  }
+
+  .story p{
+      color:#666;
+      /* font-weight: ; */
+  }
+
+  /* ---------about page (about us)------ */
+
+  .services{
+      margin-top:5% ;
+  }
+
+  .services .box-container{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 3%;
+  }
+
+  .services .box-container .box{
+      flex:20%;
+      border-radius: .5rem;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 1rem 2rem rgba(0,0,0,.1) ;
+
+  }
+
+  .services .box-container .box i{
+      padding: 1rem;
+      font-size: 30px;
+      color:#30649C;
+  }
+
+  .services .box-container .box h3{
+
+    font-size: 30px;
+    color:black;
+}
+
+.services .box-container .box p{
+
+    font-size: 16px;
+    color:#666;
+    padding:1rem 0;
+
+}
+
+/* .services .box-container .box:hover{
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1) ;
+} */
+
+
+
+
+  /* --------- about page (our patners) */
+  .brands{
+    padding-top: 4%;
+
+}
+
+.slick-slide{
+    margin: 0px 20px;
+    margin-top: 3%;
+}
+.slick-slide img{
+    width: 100%;
+
+}
+
+
+.slick-slider{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+}
+.slick-list{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0px;
+}
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block
+}
+.slick-slide{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+.slick-slide img{
+    display: block;
+}
+.slick-initialized .slick-slide{
+    display: block;
+}
+.copy{
+    padding-top: 250px;
+}
+
+
