@@ -84,8 +84,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="">Contact</a>
                 </li>
-                <button type="button" class="signupbutton"><a href="/LoginForm" style="color:white; text-decoration:none"> Sign
+{% if user.is_authenticated %}
+                     <li class="nav-item">
+                    <a class="nav-link" href="/logout">Log out</a>
+                </li>
+                  {% else %}
+                <button type="button" class="signupbutton"><a href="/login_page" style="color:white; text-decoration:none"> Sign
                     In</a></button>
+
+                {% endif %}
             </ul>
 
             </ul>

@@ -12,6 +12,7 @@ nav a{
     text-decoration: none;
     color:#30649C
 }
+<<<<<<< HEAD
 nav a:hover{
     color:rgba(34,54,69,.7);
     font-weight: bold;
@@ -37,6 +38,47 @@ nav .nav-item a:hover{
     color:#30649C;
    font-weight: bold;
 =======
+=======
+
+span.help-block{
+color:red
+}
+
+/*.form-group{padding:8px}
+input{width:200px}
+*/
+/* login form--------------------------------------------------------------------------------------------------------- */
+
+ .container-fluid .row  #myForml {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+width:400px;
+height:350px;
+opacity: 0.8;
+}
+
+
+
+/* registration form --------------------------------------------------------------------------------------------------------- */
+
+
+
+    #myFormR {
+ margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+width:400px;
+height:530px;
+opacity: 0.8;
+}
+
+
+>>>>>>> origin/main
 /* ------------------------------------------------------------------------------------------------------------------------ /*
 /* css for blue background seperator*/
 .section-separator {
@@ -749,6 +791,7 @@ nav .nav-item a:hover{
 
       }
   }
+<<<<<<< HEAD
 /* end of footer */
 
 
@@ -1087,5 +1130,8 @@ nav .nav-item a:hover{
 .copy{
     padding-top: 250px;
 }
+=======
+/* end of footer ------------------------------------------------------------------------------------------------------------------------------------------------------------------------/*
+>>>>>>> origin/main
 
 
