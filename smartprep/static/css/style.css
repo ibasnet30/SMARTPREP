@@ -12,7 +12,7 @@ nav a{
     text-decoration: none;
     color:#30649C
 }
-<<<<<<< HEAD
+
 nav a:hover{
     color:rgba(34,54,69,.7);
     font-weight: bold;
@@ -22,7 +22,7 @@ nav .nav-item a{
     text-decoration: none;
     color:rgba(34,54,69,.7)
 }
-<<<<<<< HEAD
+
 nav .nav-item a:hover{
     color:#30649C
 
@@ -37,121 +37,202 @@ nav .nav-item a:hover{
     /* border-bottom:2px solid #30649C; */
     color:#30649C;
    font-weight: bold;
-=======
-=======
-
-span.help-block{
-color:red
-}
-
-/*.form-group{padding:8px}
-input{width:200px}
-*/
-/* login form--------------------------------------------------------------------------------------------------------- */
-
- .container-fluid .row  #myForml {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-width:400px;
-height:350px;
-opacity: 0.8;
-}
-
-
-
-/* registration form --------------------------------------------------------------------------------------------------------- */
-
-
-
-    #myFormR {
- margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-width:400px;
-height:530px;
-opacity: 0.8;
-}
-
-
->>>>>>> origin/main
-/* ------------------------------------------------------------------------------------------------------------------------ /*
-/* css for blue background seperator*/
-.section-separator {
-	float: left;
-	width: 100%;
-	position: relative;
-	margin: 20px 0;
-}
-.section-separator:before{
-	content: '';
-	position: absolute;
-	left: 50%;
-	top: 0;
-	height: 3px;
-	width: 50px;
-	border-radius: 3px;
-	z-index: 2;
-	background-color: #304695;
-	margin-left: -25px;
-}
-
-/* ------------------------------------------------------------------------------------------------------------------------ /*
-/* css for white background seperator*/
-.section-separator1 {
-	float: left;
-	width: 100%;
-	position: relative;
-	margin: 10px 0px;
-	margin-bottom: 30px;
-}
-.section-separator1:before{
-	content: '';
-	position: absolute;
-	left: 50%;
-	top: 0;
-	height: 3px;
-	width: 50px;
-	border-radius: 2px;
-	z-index: 2;
-	background-color: #fff;
-	margin-left: -25px;
-
->>>>>>> origin/main
-}
-
-
-/* css for header button------------------------------------------------------------------------------------------------------------------------- */
-.signupbutton{
-
-  width: 105px;
-  height: 43px;
-  background-color: #30649C;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
-  font-size: 16px;
 
 }
 
-.signupbutton:hover{
+  /* css for heading */
+  .heading1{
+    text-align: center;
 
-    width: 105px;
-    height: 43px;
-    background-color: #E7AF36;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    font-size: 16px;
+
+
+}
+.heading1 span{
+    font-size:30px;
+    background: rgba(101, 115, 182, 0.2);
+    color:#30649C;
+    border-radius: .5rem;
+    padding: .2rem 1rem;
+    font-weight: bold;
+
+}
+.heading1 span.space{
+    background:none;
+}
+
+.button{
+}
+
+
+/* -----css for footer-------- */
+  .footer{
+      width:100%;
+
+      margin-top: 5%;
+      bottom:0;
+      background:#30649C;
+      color: #fff;
+      padding:100px 0 30px;
+
+      font-size:13px ;
+      line-height: 20px;
+
 
   }
-/* ------------------------------------------------------------------------------------------------------------------------ /*
+  .row1{
+      width:85%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+
+  }
+  .col1{
+      flex-basis: 25%;
+      padding:10px;
+  }
+  .col1:nth-child(2),.col1:nth-child(3){
+      flex-basis: 15%;
+  }
+
+  .col1 h5{
+      width:fit-content;
+      margin-bottom: 40px;
+      position: relative;
+      font-size: 16px;
+
+  }
+  .email-id{
+      width: fit-content;
+      border-bottom: 1px solid #ccc;
+      margin: 20px 0;
+
+  }
+  .footer li{
+      list-style: none;
+      margin-bottom: 12px;
+      margin-right: 5%;
+
+  }
+  .footer li a{
+      text-decoration: none;
+      color:#fff;
+
+  }
+
+  .footer li a:hover{
+    text-decoration: none;
+    color:black;
+
+}
+  .footer form{
+      padding-bottom: 15px;
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #fff;
+      margin-bottom: 50px;
+  }
+  .footer form .fa{
+      font-size: 18px;
+      margin-right: 10px;
+  }
+  .footer form input{
+      width:100%;
+      background: transparent;
+      color:white;
+      border:0;
+      outline:none;
+
+  }
+  .footer form button{
+      background: transparent;
+      border: 0;
+      outline: none;
+      cursor: pointer;
+  }
+  .footer form button .fa{
+      font-size: 16px;
+      color:white;
+
+  }
+  .social-icons .fa{
+      width:40px;
+      height: 40px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      font-size: 20px;
+      color:#000;
+      background: #fff;
+      margin-right: 15px;
+      cursor: pointer;
+
+
+
+  }
+  .footer hr{
+      width: 90%;
+      border: 0;
+      border-bottom: 1px solid #fff;
+      margin: 20px auto;
+
+  }
+  .Copyright{
+      text-align: center;
+  }
+  .underline{
+      width:100%;
+      height:5px;
+      background: white;
+      border-radius:3px;
+      position: absolute;
+      top: 25px;
+      left:0;
+      overflow: hidden;
+  }
+  .underline span{
+      width:15px;
+      height:100%;
+      background: black;
+      border-radius: 3px;
+      position: absolute;
+      top:0;
+      left: 10px;
+      animation: moving 2s linear infinite;
+  }
+
+  @keyframes moving{
+      0%{
+          left:-20px;
+      }
+      100%{
+          left: 100%;
+      }
+  }
+
+  /* -----------responsive for footer------------- */
+  @media (max-width:700px){
+      footer{
+          bottom:unset;
+      }
+      .col1{
+          flex-basis: 100%;
+      }
+      .col1:nth-child(2),.col1:nth-child(3){
+          flex-basis: 100%;
+      }
+      .form-control{
+
+
+   margin: 0.7rem 0rem;
+
+      }
+  }
+
+/* end of footer */
+
 /* css for video-play*/
 .video {
   position: relative;
@@ -601,202 +682,6 @@ opacity: 0.8;
 
 
 
-
-  /* css for heading */
-  .heading1{
-    text-align: center;
-
-
-
-}
-.heading1 span{
-    font-size:30px;
-    background: rgba(101, 115, 182, 0.2);
-    color:#30649C;
-    border-radius: .5rem;
-    padding: .2rem 1rem;
-    font-weight: bold;
-
-}
-.heading1 span.space{
-    background:none;
-}
-
-/* ------------------------------------------------------------------------------------------------------------------------ /*
-/* css for footer*/
-
-/* -----css for footer-------- */
-  .footer{
-      width:100%;
-
-      margin-top: 5%;
-      bottom:0;
-      background:#30649C;
-      color: #fff;
-      padding:100px 0 30px;
-
-      font-size:13px ;
-      line-height: 20px;
-
-
-  }
-  .row1{
-      width:85%;
-      margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: space-between;
-
-  }
-  .col1{
-      flex-basis: 25%;
-      padding:10px;
-  }
-  .col1:nth-child(2),.col1:nth-child(3){
-      flex-basis: 15%;
-  }
-
-  .col1 h5{
-      width:fit-content;
-      margin-bottom: 40px;
-      position: relative;
-      font-size: 16px;
-
-  }
-  .email-id{
-      width: fit-content;
-      border-bottom: 1px solid #ccc;
-      margin: 20px 0;
-
-  }
-  .footer li{
-      list-style: none;
-      margin-bottom: 12px;
-      margin-right: 5%;
-
-  }
-  .footer li a{
-      text-decoration: none;
-      color:#fff;
-
-  }
-
-  .footer li a:hover{
-    text-decoration: none;
-    color:black;
-
-}
-  .footer form{
-      padding-bottom: 15px;
-      display:flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #fff;
-      margin-bottom: 50px;
-  }
-  .footer form .fa{
-      font-size: 18px;
-      margin-right: 10px;
-  }
-  .footer form input{
-      width:100%;
-      background: transparent;
-      color:white;
-      border:0;
-      outline:none;
-
-  }
-  .footer form button{
-      background: transparent;
-      border: 0;
-      outline: none;
-      cursor: pointer;
-  }
-  .footer form button .fa{
-      font-size: 16px;
-      color:white;
-
-  }
-  .social-icons .fa{
-      width:40px;
-      height: 40px;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 40px;
-      font-size: 20px;
-      color:#000;
-      background: #fff;
-      margin-right: 15px;
-      cursor: pointer;
-
-
-
-  }
-  .footer hr{
-      width: 90%;
-      border: 0;
-      border-bottom: 1px solid #fff;
-      margin: 20px auto;
-
-  }
-  .Copyright{
-      text-align: center;
-  }
-  .underline{
-      width:100%;
-      height:5px;
-      background: white;
-      border-radius:3px;
-      position: absolute;
-      top: 25px;
-      left:0;
-      overflow: hidden;
-  }
-  .underline span{
-      width:15px;
-      height:100%;
-      background: black;
-      border-radius: 3px;
-      position: absolute;
-      top:0;
-      left: 10px;
-      animation: moving 2s linear infinite;
-  }
-
-  @keyframes moving{
-      0%{
-          left:-20px;
-      }
-      100%{
-          left: 100%;
-      }
-  }
-
-  /* -----------responsive for footer------------- */
-  @media (max-width:700px){
-      footer{
-          bottom:unset;
-      }
-      .col1{
-          flex-basis: 100%;
-      }
-      .col1:nth-child(2),.col1:nth-child(3){
-          flex-basis: 100%;
-      }
-      .form-control{
-
-
-   margin: 0.7rem 0rem;
-
-      }
-  }
-<<<<<<< HEAD
-/* end of footer */
-
-
-
-
 /* ---------------contact form-------------- */
 
 
@@ -1130,8 +1015,8 @@ opacity: 0.8;
 .copy{
     padding-top: 250px;
 }
-=======
+
 /* end of footer ------------------------------------------------------------------------------------------------------------------------------------------------------------------------/*
->>>>>>> origin/main
+
 
 
