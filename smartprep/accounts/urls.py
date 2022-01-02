@@ -6,8 +6,9 @@ urlpatterns=[
 
     path('contact/', views.contact),
     path('about/', views.about),
-    path('LoginForm/', views.loginpage),
-    path('RegisterForm/', views.Registerpage),
+    path('login/', views.login_page),
+    path('RegisterForm/', views.register_user),
+    path('logout', views.logout_user),
 
 
 

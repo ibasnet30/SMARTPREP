@@ -1,5 +1,6 @@
 
 {% load static %}
+
 <nav class="navbar navsi navbar-expand-lg bg-light fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">Smartprep </a>
@@ -8,8 +9,6 @@
           </button>
           <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0 ml-5">
-
-
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Courses
@@ -22,18 +21,26 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{activate_about}}" aria-current="page" href="/about">About</a>
+                <a class="nav-link {{activate_about}}"  href="/about">About</a>
+
               </li>
+
               <li class="nav-item">
                 <a class="nav-link {{activate_contact}}" href="/contact">Contact</a>
               </li>
-
             </ul>
             <ul class="navbar-nav ms-auto">
+              {% if user.is_authenticated %}
+              <a  href="/logout">
+                 <button type="button" class="button">LogOut</button>
+
+                {% else %}
+              </a>
               <a  href="/RegisterForm">
                  <button type="button" class="button">Sign Up</button>
 
               </a>
+              {% endif %}
 
 <!--              <a href="/LoginForm">-->
 <!--                 <button type="button" class="button">Sign In</button>-->

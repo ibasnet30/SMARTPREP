@@ -26,12 +26,12 @@ def about(request):
     }
     return render(request, 'accounts/aboutus.html',context)
 
-def loginpage(request):
-    return render(request,'accounts/login.html')
+# def loginpage(request):
+#     return render(request,'accounts/login.html')
 
-
-def Registerpage(request):
-    return render(request,'accounts/register.html')
+#
+# def Registerpage(request):
+#     return render(request,'accounts/register.html')
 
 # function for logout
 @login_required
@@ -48,16 +48,16 @@ def register_user(request):
             user = form.save()
             login(request,user)
             messages.add_message(request, messages.SUCCESS, "User registered successfully")
-            return redirect('/Login_page')
+            return redirect('/login')
         else:
             messages.add_message(request, messages.ERROR, "Something went wrong")
-            return render(request, 'accounts/register_page.html', {'form_user':form})
+            return render(request, 'accounts/register.html', {'form_user':form})
 
     context = {
         'form_user': CreateUserForm,
         'activate_register': 'active'
     }
-    return render(request, 'accounts/register_page.html', context)
+    return render(request, 'accounts/register.html', context)
 
 
 
@@ -84,13 +84,15 @@ def login_page(request):
 
             else:
                 messages.add_message(request, messages.ERROR, "Invalid data")
-                return render(request, 'accounts/login_page.html', {'form_login': form})
+                return render(request, 'accounts/login.html', {'form_login': form})
     context = {
         'form_login': LoginForm,
         'activate_login': 'active'
     }
-    return render(request, 'accounts/login_page.html', context)
+    return render(request, 'accounts/login.html', context)
 
 
-
-
+@login_required
+def logout_user(request):
+    logout(request)
+    return redirect('/login')
