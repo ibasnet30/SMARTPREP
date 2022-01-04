@@ -12,6 +12,13 @@ from accounts.auth import unauthenticated_user
 def homepage(request):
     return render(request, 'accounts/homepage.html')
 
+def course(request):
+    context = {
+        'activate_course': 'active',
+
+    }
+    return render(request, 'accounts/course.html')
+
 def contact(request):
     context = {
         'activate_contact': 'active',

@@ -1,11 +1,9 @@
-
 body,
 input {
   font-family: "Poppins", sans-serif;
 
 
 }
-
 
 /* css for header*/
 nav a{
@@ -230,53 +228,142 @@ nav .nav-item a:hover{
   }
 
 /* end of footer */
+.section-separator {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 20px 0;
+}
+.section-separator:before{
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 0;
+	height: 3px;
+	width: 50px;
+	border-radius: 3px;
+	z-index: 2;
+	background-color: #30649C;
+	margin-left: -25px;
+}
+
 
 /* css for video-play*/
-.video {
-  position: relative;
-  width: 100%;
-  height: 85vh;
-  display: flex;
-  overflow: hidden;
-}
-.video h1{
-  font-size: 3rem;
-  font-weight: 800;
-  font-family: sans-serif;
-  padding-left: 300px;
-  margin-top:100px;
-  z-index: 1;
-  color: #fff;
+.showcase
+{
+	position: relative;
+	right: 0;
+	width: 100%;
+	min-height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #111;
+	transition: 0.5s;
+	z-index: 2;
 }
 
-.video-container{
-  position:absolute;
+.showcase.active
+{
+  right: 300px;
+}
+
+.showcase video
+{
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.8;
 }
-.Core{
-    background: #304695;
-    height: 70vh;
-	position: relative;
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #7984af;
+  mix-blend-mode: overlay;
+}
 
+.text
+{
+  position: relative;
+  z-index: 10;
 }
-.corevalues{
-    color: #fff;
-    font-size: 34px;
-	font-weight: 800;
+
+.text h2
+{
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
 }
+.text h3
+{
+  font-size: 4em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text p
+{
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.text a
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover
+{
+  letter-spacing: 6px;
+}
+
+
+@media (max-width: 991px)
+{
+  .showcase
+
+  {
+    padding: 40px;
+  }
+  .text h2
+  {
+    font-size: 3em;
+  }
+  .text h3
+  {
+    font-size: 2em;
+  }
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------ /*
-/* css for course categories*/
+
 /* Browsing course categories */
 
 .categories{
-    height:50vh;
-    margin-top:100px:
+    margin-top:20px
 }
-
-
-
 .categories h1{
 	font-size: 34px;
 	font-weight: 800;
@@ -314,10 +401,10 @@ nav .nav-item a:hover{
 /* ------------------------------------------------------------------------------------------------------------------------ /*
 /* css for popular Courses*/
 .courses{
-	background: #304695;
+    background:#fcfcfc
 }
 .courses h1{
-	color: #fff;
+	color: #304695;
 	width: 100%;
 	text-align: center;
 	font-size: 34px;
@@ -340,11 +427,7 @@ nav .nav-item a:hover{
 	width: 90px;
 }
 
-.course .card-body #icon{
-	font-weight: 500;
-	color: rgb(82, 80, 80);
-	margin-top: 10px;
-}
+
 
 /* ------------------------------------------------------------------------------------------------------------------------ /*
 /* css for Learning Methods*/
@@ -376,7 +459,7 @@ nav .nav-item a:hover{
 /* ------------------------------------------------------------------------------------------------------------------------ /*
 /* css for Instructor*/
 .instructor{
-	background:#304695;
+    background:#fcfcfc;
 	height: 85vh;
 	width: 100%;
 	position: relative;
@@ -387,7 +470,7 @@ nav .nav-item a:hover{
 	font-weight: 800;
 	text-align: center;
 	padding-top: 40px;
-	color: #fff;
+	color: #304695;
 }
 .slide-row{
 	display: flex;
@@ -399,6 +482,7 @@ nav .nav-item a:hover{
 	height: 400px;
 	position: relative;
 }
+
 .teacher-img{
 	position: absolute;
 	top:10%;
@@ -457,14 +541,14 @@ nav .nav-item a:hover{
 	width: 15px;
 	margin: 4px;
 	border-radius: 10px;
-	background: #fff;
+	background: #304695;
 	cursor: pointer;
 	transition: 0.5s;
 }
 
-/*.active{
+.active1{
 	width: 45px;
-}*/
+}
 
 .teacherDetail{
 	width: 100%;
@@ -480,7 +564,7 @@ nav .nav-item a:hover{
 	float: left;
 	position: relative;
 	padding: 30px 0;
-	background: #fcfcfd;
+    background:#F3F5F6;
 	z-index: 1;
 	width: 100%;
 }
@@ -514,7 +598,7 @@ nav .nav-item a:hover{
 .listing-carousel-button{
 	position: absolute;
 	top: 50%;
-	width: 80px;
+	width: 100px;
 	height: 50px;
 	line-height: 50px;
 	margin-top: -25px;
@@ -551,7 +635,7 @@ nav .nav-item a:hover{
 .testimonials-text {
 	padding: 75px 50px 75px;
 	overflow:hidden;
-	background: #f5f6fa;
+	background: #e4e6ee;
 	border:1ps solid #f1f1f1;
 	border-radius: 10px;
 	transition: all .3s ease-in-out;
@@ -679,7 +763,6 @@ nav .nav-item a:hover{
 
 
 
-
 /* ---------------contact form-------------- */
 
 
@@ -755,19 +838,19 @@ nav .nav-item a:hover{
       margin-top: 5%;
   }
 
-.contact-body{
+  .contact-body{
     max-width:1320px;
 
     padding: 0 1rem;
     }
 
 
-    .contact-info{
+  .contact-info{
     margin:2rem 0;
     text-align:center;
     padding:2rem 0;
     }
-    .contact-info span{
+  .contact-info span{
     display:block;
     }
     .contact-info div{
@@ -776,12 +859,12 @@ nav .nav-item a:hover{
     }
 
 
-    .contact-info span .fa{
+  .contact-info span .fa{
     font-size:30px;
     padding-bottom:0.9rem;
     color:#30649C;
     }
-    .contact-info div span:nth-child(2){
+  .contact-info div span:nth-child(2){
     font-weight:500;
     font-size:1.1rem;
 
@@ -1015,6 +1098,3 @@ nav .nav-item a:hover{
 }
 
 /* end of footer ------------------------------------------------------------------------------------------------------------------------------------------------------------------------/*
-
-
-
