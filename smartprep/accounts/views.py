@@ -1,5 +1,6 @@
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 
 from django.contrib import messages
@@ -8,6 +9,8 @@ from django.contrib import messages
 from .forms import CreateUserForm, LoginForm
 from accounts.auth import unauthenticated_user
 
+def prac(request):
+    return render(request, 'accounts/pracc.html')
 
 def homepage(request):
     return render(request, 'accounts/homepage.html')
@@ -61,8 +64,65 @@ def register_user(request):
 
 
 
-@unauthenticated_user
+# @unauthenticated_user
+# def login_page(request):
+#     return render(request, 'accounts/login.html')
+
+
+
+    # if request.method == 'POST':
+    #     username=request.POST.get('username')
+    #     password=request.POST.get('password')
+    #     user = authenticate(request, username=username, password=password)
+    #     if user is not None:
+    #         login(request, user)
+    #         return redirect('/materials/home')
+    #
+    #
+    #         # if user.is_staff == 1 & user.is_superuser == 1:
+    #         #     login(request, user)
+    #         #     return redirect('/admins/dashboard')
+    #         #
+    #         # elif user.is_staff == 0 & user.is_superuser == 0:
+    #         #     login(request, user)
+    #         #     return redirect('/materials/home')
+    #         #
+    #         # elif not user.is_superuser == 0 & user.is_staff == 1:
+    #         #     login(request, user)
+    #         #     return redirect('/lecturer/lecturerDashboard')
+    #
+    #     else:
+    #         messages.add_message(request, messages.ERROR, "Invalid data")
+    #         return render(request, 'accounts/login.html')
+    # context = {}
+    # return render(request, 'accounts/login.html', context)
+
+
+@login_required
+def logout_user(request):
+    logout(request)
+    return redirect('/login')
+
+#
+# def register(request):
+#     if request.method=='POST':
+#         form=UserCreationForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             messages.add_message(request,messages.SUCCESS, 'User registered sccessfully')
+#             return redirect('/login')
+#         else:
+#             messages.add_message(request,messages.ERROR,'Unable to register')
+#             return render(request, 'accounts/registerr.html', {'register':form})
+#     context={
+#         'register':UserCreationForm,
+#         'activate_register': 'active'
+#     }
+#     return render(request, 'accounts/registerr.html', context)
+#
+# @unauthenticated_user
 def login_page(request):
+
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
@@ -80,7 +140,7 @@ def login_page(request):
 
                 elif not user.is_superuser == 0 & user.is_staff == 1:
                     login(request, user)
-                    return redirect('/lecturer/lib_dashboard')
+                    return redirect('/lecturer/lecturerDashboard')
 
             else:
                 messages.add_message(request, messages.ERROR, "Invalid data")
@@ -92,7 +152,6 @@ def login_page(request):
     return render(request, 'accounts/login.html', context)
 
 
-@login_required
-def logout_user(request):
-    logout(request)
-    return redirect('/login')
+
+
+#

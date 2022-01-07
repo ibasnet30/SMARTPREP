@@ -19,7 +19,7 @@ def admin_only(view_function):
         elif request.user.is_staff==0 & request.user.is_superuser==0:
             return redirect('/materials/home')
         else:
-            return redirect('')
+            return redirect('/lecturer/lecturerDashboard/')
     return wrapper_function
 
 # give access to normal user pages if request comes from learner
@@ -32,7 +32,7 @@ def learner_only(view_function):
         elif request.user.is_staff == 1 & request.user.is_superuser == 1:
             return redirect('/admins/dashboard')
         else:
-            return redirect('')
+            return redirect('/lecturer/lecturerDashboard/')
     return wrapper_function
 
 # give access to lecturer pages if request comes from lecturer

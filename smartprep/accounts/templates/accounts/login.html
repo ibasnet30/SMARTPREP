@@ -5,18 +5,7 @@
 .form-group{width:122%;
 padding-top:25px}
 
-input[type=text] {
-  background-color: #E2EBF3;
 
-}
-input[type=email] {
-  background-color: #E2EBF3;
-
-}
-input[type=password] {
-  background-color: #E2EBF3;
-
-}
 *,
 *::before,
 *::after {
@@ -190,7 +179,7 @@ main form {
   position: absolute;
   width: 120%;
   height: 100%;
-  background: none;
+
   border: none;
   outline: none;
   border-bottom: 1px solid #fff;
@@ -198,6 +187,8 @@ main form {
   font-size: 0.95rem;
   color: #fff;
   transition: 0.4s;
+  background-color:#30649C;
+
 }
 .forget{
   color: #30649C;
@@ -217,7 +208,9 @@ label {
 }
 
 .input-field.active {
+
   border-bottom-color: #fff;
+
 }
 
 .input-field.active + label {
@@ -468,10 +461,9 @@ main.sign-up-mode .carousel1 {
   .main{
 margin-top:5%;
 }
-
+input[type=text] {
+    background-color: #30649C;
 }
-
-
 
 
 
@@ -490,7 +482,7 @@ margin-top:5%;
 
 
 {% block main_content %}
-
+#30649C
 
 
     <main class="main">
@@ -498,109 +490,152 @@ margin-top:5%;
 
         <div class="inner-box">
           <div class="forms-wrap">
+<!--               <div class="card p-2" id="myForml" style="line-height:1.5" >-->
+<!--                <form class="form myForm" action="" method="POST">-->
+<!--                    <h3 id="head3" class="text-center mt-2 mb-2">Login</h3>-->
+<!--                    {% csrf_token %}-->
+<!--                    {{ form_login | bootstrap_horizontal }}-->
+<!--                    <div id="btnn" class="pt-3">-->
+<!--                    <button id="buttonn" type="submit" class="btnn btn btn-primary align-content-center"-->
+<!--                            style="line-height:0.8; width:100%">Submit</button>-->
+<!--                    </div>-->
+<!--                    <div class="fontt">-->
+<!--                        <p id="fontt" class="text-center" style="font-weight:100; ">Don't have an account?-->
+<!--                            <a id="form-link1" href="/register">Register</a>-->
+<!--                            <br>-->
+<!--                            Forgot password?  <a id="form-link2" href="/reset_password/">Reset</a>-->
+<!--                        </p>z-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
 
-            <div class="card p-2" id="myForml" style="line-height:1.5" >
-                <form class="form myForm" action="" method="POST">
-                    <h3 id="head3" class="text-center mt-2 mb-2">Login</h3>
-                    {% csrf_token %}
-                    {{ form_login | bootstrap_horizontal }}
-                    <div id="btnn" class="pt-3">
-                    <button id="buttonn" type="submit" class="btnn btn btn-primary align-content-center"
-                            style="line-height:0.8; width:100%">Submit</button>
-                    </div>
-                    <div class="fontt">
-                        <p id="fontt" class="text-center" style="font-weight:100; ">Don't have an account?
-                            <a id="form-link1" href="/register">Register</a>
-                            <br>
-                            Forgot password?  <a id="form-link2" href="/reset_password/">Reset</a>
-                        </p>z
-                    </div>
-                </form>
-            </div>
-<!--            <form action="index.html" autocomplete="off" class="sign-in-form">-->
-<!--              <div class="logo">-->
-<!--                &lt;!&ndash; <img src="./img/logo.png" alt="easyclass" /> &ndash;&gt;-->
-<!--                <h4>LOGO</h4>-->
-<!--              </div>-->
-
-<!--              <div class="heading">-->
-<!--                <h2>LOGIN</h2>-->
-
-<!--              </div>-->
-
-
-<!--              <div class="site">-->
-
-
-<!--                <div class="centerdiv">-->
-<!--                 <span class="span">-->
-<!--                  <img class="don" src="{% static 'images/facebook.png' %}" alt="easyclass" />-->
-<!--                  Facebook-->
-
-<!--                 </span>-->
-<!--                </div>-->
-
-<!--                <div class="centerdiv">-->
-<!--                  <span class="span">-->
-<!--                   <img class="don" src="{% static 'images/instragram.png' %}" alt="easyclass" />-->
-<!--                   Instagram-->
-
-<!--                  </span>-->
-<!--                 </div>-->
+<!--             <div class="card p-2" id="myForml" style="line-height:1.5" >-->
+<!--                <form class="form myForm" action="" method="POST">-->
+<!--                    <h3 id="head3" class="text-center mt-2 mb-2">Login</h3>-->
+<!--                    {% csrf_token %}-->
+<!--                    {{ form_login | bootstrap_horizontal }}-->
+<!--                    <div id="btnn" class="pt-3">-->
+<!--                    <button id="buttonn" type="submit" class="btnn btn btn-primary align-content-center"-->
+<!--                            style="line-height:0.8; width:100%">Submit</button>-->
+<!--                    </div>-->
+<!--                    <div class="fontt">-->
+<!--                        <p id="fontt" class="text-center" style="font-weight:100; ">Don't have an account?-->
+<!--                            <a id="form-link1" href="/register">Register</a>-->
+<!--                            <br>-->
+<!--                            Forgot password?  <a id="form-link2" href="/reset_password/">Reset</a>-->
+<!--                        </p>z-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
 
 
-<!--              </div>-->
+            <form action="" autocomplete="off" class="sign-in-form" method="POST">
+                {% csrf_token %}
 
-<!--              <div class="heading">-->
-<!--                <h5>&#45;&#45; Or sign in with &#45;&#45; </h5>-->
+                <div class="logo">
+                <!-- <img src="./img/logo.png" alt="easyclass" /> -->
+                <h4>LOGO</h4>
+              </div>
 
-<!--              </div>-->
+              <div class="heading">
+                <h2>LOGIN</h2>
+
+              </div>
 
 
+              <div class="site">
 
 
+                <div class="centerdiv">
+                 <span class="span">
+                  <img class="don" src="{% static 'images/facebook.png' %}" alt="easyclass" />
+                  Facebook
+
+                 </span>
+                </div>
+
+                <div class="centerdiv">
+                  <span class="span">
+                   <img class="don" src="{% static 'images/instragram.png' %}" alt="easyclass" />
+                   Instagram
+
+                  </span>
+                 </div>
 
 
+              </div>
+
+              <div class="heading">
+                <h5>-- Or sign in with -- </h5>
+
+              </div>
 
 
-<!--              <div class="actual-form">-->
-<!--                <div class="input-wrap">-->
-<!--                  <input-->
-<!--                    type="text"-->
-<!--                    minlength="4"-->
-<!--                    class="input-field"-->
-<!--                    autocomplete="off"-->
-<!--                    required-->
-<!--                  />-->
-<!--                  <label>Name</label>-->
-<!--                </div>-->
+              <div class="actual-form">
+                <div class="input-wrap">
+<!--                    <input type="text" name="username" placeholder="Username..." class="form-control">-->
+                  <input
+                    type="text"
+                    minlength="4"
+                    class="input-field"
+                    name="username"
+                    autocomplete="off"
+                    required
 
-<!--                <div class="input-wrap">-->
-<!--                  <input-->
-<!--                    type="password"-->
-<!--                    minlength="4"-->
-<!--                    class="input-field"-->
-<!--                    autocomplete="off"-->
-<!--                    required-->
-<!--                  />-->
-<!--                  <label>Password</label>-->
-<!--                </div>-->
-<!--                &lt;!&ndash; <div class="heading1">-->
-<!--                  <h5>Forget Password? </h5>-->
+                  />
+                  <label>Name</label>
+                </div>
 
-<!--                </div> &ndash;&gt;-->
+                <div class="input-wrap">
+<!--                    <input type="password" name="password" placeholder="Password..." class="form-control" >-->
+                  <input
+                    type="password"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    name="password"
+                    required
+
+                  />
+                  <label>Password</label>
+                </div>
+                <!-- <div class="heading1">
+                  <h5>Forget Password? </h5>
+
+                </div> -->
 
 
 <!--                <input type="submit" value="Sign In" class="sign-btn" />-->
-<!--                <div class="heading">-->
+                   <button id="buttonn" type="submit" class="sign-btn"
+                            style="line-height:0.8; width:100%">Submit</button>
+                <div class="heading">
 
-<!--                  <h6>Don't have an account?</h6>-->
-<!--                  <a href="/RegisterForm" class="toggle">Sign Up</a>-->
-<!--                </div>-->
+                  <h6>Don't have an account?</h6>
+                  <a href="/RegisterForm" class="toggle">Sign Up</a>
+                </div>
 
 
-<!--              </div>-->
+              </div>
 <!--            </form>-->
+<!--              	<form method="POST" action="">-->
+<!--                    {% csrf_token %}-->
+<!--						<div class="input-group mb-3">-->
+<!--							<div class="input-group-append">-->
+<!--								<span class="input-group-text"><i class="fas fa-user"></i></span>-->
+<!--							</div>-->
+<!--							<input type="text" name="username" placeholder="Username..." class="form-control">-->
+<!--						</div>-->
+<!--						<div class="input-group mb-2">-->
+<!--							<div class="input-group-append">-->
+<!--								<span class="input-group-text"><i class="fas fa-key"></i></span>-->
+<!--							</div>-->
+<!--								<input type="password" name="password" placeholder="Password..." class="form-control" >-->
+<!--						</div>-->
+
+<!--							<div class="d-flex justify-content-center mt-3 login_container">-->
+<!--				 				<input class="btn login_btn" type="submit" value="Login">-->
+<!--				   			</div>-->
+					</form>
 
           </div>
 

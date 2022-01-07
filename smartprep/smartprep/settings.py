@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'admins.apps.AdminsConfig',
     'accounts.apps.AccountsConfig',
     'materials.apps.MaterialsConfig',
-    'bootstrapform'
+    'lecturer.apps.LecturerConfig',
+    'bootstrapform',
 ]
 
 MIDDLEWARE = [
