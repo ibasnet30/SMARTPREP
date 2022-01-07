@@ -19,7 +19,7 @@ def content(request):
 
 
 
-def course(request):
+def courses(request):
     course=Courses.objects.all().order_by('-id')
     context={
         'course_material':course
@@ -27,3 +27,12 @@ def course(request):
 
     return render(request, 'materials/courses.html', context )
 
+
+def categories(request):
+    category=Categories.objects.all().order_by('-id')
+    context={
+        'category_material':category,
+
+    }
+
+    return render(request, 'materials/categories.html', context )

@@ -5,7 +5,8 @@ urlpatterns = [
 
    # path('home', views.content2),
     path('content/', views.content),
-    path('course/', views.course)
+    path('courses/', views.courses),
+    path('categories/', views.categories)
     # path('content/', views.content2)
 
 ]

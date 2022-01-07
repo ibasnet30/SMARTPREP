@@ -34,29 +34,21 @@
 	margin-bottom: 25px;
 	color: #b3b9b9;
 	background: #fff;
-	padding: 100px 15px 0 25px;
+	padding: 15px;
 	border-radius: 3px;
-
-	height:130px
 }
 
 .links ul{
 	display: flex;
-	float:right
+	justify-content: center;
 }
-
-.explore-courses{margin: 0 15px;
-	font-weight: 600;
-	color:black;
-	font-size: 18px;
-	cursor: pointer;}
 
 .links ul li{
 	margin: 0 15px;
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	font-size: 18px;
+	font-size: 20px;
 	cursor: pointer;
 }
 
@@ -67,8 +59,8 @@
 
 .view_main{
 	background: #fff;
+	border-radius: 3px;
 	padding: 15px;
-	border-color: red;
 }
 
 .list-view .view_item {
@@ -80,9 +72,6 @@
 	align-items: center;
 }
 
-
-
-.list-view .view_item:hover{background-color:#F4F5F6;}
 .list-view .view_item:last-child{
 	margin-bottom: 0;
 }
@@ -172,7 +161,7 @@ display:flex;
 
 <!-- ----------our Course-------- -->
 
-<div class="types mt-5 p-5" style="background-color:white">
+<div class="types mt-5 p-5">
     <h1 class="heading1">
         <span>O</span>
         <span>U</span>
@@ -186,38 +175,35 @@ display:flex;
         <span>E</span>
         <span>S</span>
     </h1>
-   <div class="wrapper">
-
-
+    <div class="wrapper">
         <div class="links">
-            <span class="explore-courses ">
-
-
-                Explore Courses</span>
             <ul>
-                <li data-view="grid-view" class="li-grid">
-                    <i class="fas fa-th-large"></i>
-
+                <li data-view="grid-view" class="li-grid active">
+                   <i class="fas fa-th-large"></i>
+                    Categories
                 </li>
-                 <li data-view="list-view" class="li-list active">
+                 <a href="/materials/courses/" style=" text-decoration: none;">
+                     <li data-view="list-view" class="li-list"
+                         style="color:#CACACE; text-decoration:none">
                     <i class="fas fa-th-list"></i>
-
+                    Courses
                 </li>
+                 </a>
             </ul>
         </div>
         <div class="view_main">
 
-            <div class="view_wrap grid-view" style="display: none;">
+            <div class="view_wrap grid-view" >
 
-                {% for i in course_material %}
+                {% for i in category_material %}
                 <div class="view_item">
                     <div class="vi_left">
-                        <img src="/{{i.course_Image}}" alt="Relevant Image">
+                        <img src="/{{i.category_Image}}" alt="Relevant Image">
                     </div>
                     <div class="vi_right" style="height:200px">
-                        <p class="title">{{i.course_Name}}</p>
+                        <p class="title">{{i.category_Name}}</p>
                         <div class="content-content">
-                        <p class="content"   style="  text-align: justify; color:black">{{i.course_Description}}</p>
+                        <p class="content"   style="  text-align: justify; color:black">{{i.category_Description}}</p>
                         </div>
 
                         <div class="bottom-CE">
@@ -229,26 +215,7 @@ display:flex;
 
             </div>
 
-             <div class="view_wrap list-view" style="display: block;">
 
-                 {%for i in course_material %}
-                <div class="view_item">
-                    <div class="vi_left">
-                        <img src="/{{i.course_Image}}" alt="Relevant Image">
-                    </div>
-                    <div class="vi_right">
-                        <p class="title">{{i.course_Name}}</p>
-                        <p class="content" style="overflow:hidden;
-                        display:-webkit-box;
-                        -webkit-box-orient:vertical;
-                        -webkit-line-clamp:2">
-                            {{i.course_Description}}</p>
-                        <div class="btn">Explore ></div>
-                    </div>
-                </div>
-                 {% endfor %}
-
-            </div>
         </div>
     </div>
 </div>
