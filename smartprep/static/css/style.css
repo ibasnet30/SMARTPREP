@@ -1,11 +1,9 @@
-
 body,
 input {
   font-family: "Poppins", sans-serif;
 
 
 }
-
 
 /* css for header*/
 nav a{
@@ -230,53 +228,141 @@ nav .nav-item a:hover{
   }
 
 /* end of footer */
+.section-separator {
+	float: left;
+	width: 100%;
+	position: relative;
+	margin: 20px 0;
+}
+.section-separator:before{
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 0;
+	height: 3px;
+	width: 50px;
+	border-radius: 3px;
+	z-index: 2;
+	background-color: #30649C;
+	margin-left: -25px;
+}
+
 
 /* css for video-play*/
-.video {
-  position: relative;
-  width: 100%;
-  height: 85vh;
-  display: flex;
-  overflow: hidden;
-}
-.video h1{
-  font-size: 3rem;
-  font-weight: 800;
-  font-family: sans-serif;
-  padding-left: 300px;
-  margin-top:100px;
-  z-index: 1;
-  color: #fff;
+.showcase
+{
+	position: relative;
+	right: 0;
+	width: 100%;
+	min-height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #111;
+	transition: 0.5s;
+	z-index: 2;
 }
 
-.video-container{
-  position:absolute;
+.showcase.active
+{
+  right: 300px;
+}
+
+.showcase video
+{
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.8;
 }
-.Core{
-    background: #304695;
-    height: 70vh;
-	position: relative;
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #7984af;
+  mix-blend-mode: overlay;
+}
 
+.text
+{
+  position: relative;
+  z-index: 10;
 }
-.corevalues{
-    color: #fff;
-    font-size: 34px;
-	font-weight: 800;
+
+.text h2
+{
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
 }
+.text h3
+{
+  font-size: 4em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text p
+{
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.text a
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover
+{
+  letter-spacing: 6px;
+}
+
+
+@media (max-width: 991px)
+{
+  .showcase
+
+  {
+    padding: 40px;
+  }
+  .text h2
+  {
+    font-size: 3em;
+  }
+  .text h3
+  {
+    font-size: 2em;
+  }
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------ /*
-/* css for course categories*/
 /* Browsing course categories */
 
 .categories{
-    height:50vh;
-    margin-top:100px:
+    margin-top:20px
 }
-
-
-
 .categories h1{
 	font-size: 34px;
 	font-weight: 800;
@@ -314,10 +400,10 @@ nav .nav-item a:hover{
 /* ------------------------------------------------------------------------------------------------------------------------ /*
 /* css for popular Courses*/
 .courses{
-	background: #304695;
+    background:#fcfcfc
 }
 .courses h1{
-	color: #fff;
+	color: #304695;
 	width: 100%;
 	text-align: center;
 	font-size: 34px;
@@ -340,11 +426,7 @@ nav .nav-item a:hover{
 	width: 90px;
 }
 
-.course .card-body #icon{
-	font-weight: 500;
-	color: rgb(82, 80, 80);
-	margin-top: 10px;
-}
+
 
 /* ------------------------------------------------------------------------------------------------------------------------ /*
 /* css for Learning Methods*/
@@ -376,7 +458,7 @@ nav .nav-item a:hover{
 /* ------------------------------------------------------------------------------------------------------------------------ /*
 /* css for Instructor*/
 .instructor{
-	background:#304695;
+    background:#fcfcfc;
 	height: 85vh;
 	width: 100%;
 	position: relative;
@@ -387,7 +469,7 @@ nav .nav-item a:hover{
 	font-weight: 800;
 	text-align: center;
 	padding-top: 40px;
-	color: #fff;
+	color: #304695;
 }
 .slide-row{
 	display: flex;
@@ -399,6 +481,7 @@ nav .nav-item a:hover{
 	height: 400px;
 	position: relative;
 }
+
 .teacher-img{
 	position: absolute;
 	top:10%;
@@ -457,14 +540,14 @@ nav .nav-item a:hover{
 	width: 15px;
 	margin: 4px;
 	border-radius: 10px;
-	background: #fff;
+	background: #304695;
 	cursor: pointer;
 	transition: 0.5s;
 }
 
-/*.active{
+.active1{
 	width: 45px;
-}*/
+}
 
 .teacherDetail{
 	width: 100%;
@@ -480,7 +563,7 @@ nav .nav-item a:hover{
 	float: left;
 	position: relative;
 	padding: 30px 0;
-	background: #fcfcfd;
+    background:#F3F5F6;
 	z-index: 1;
 	width: 100%;
 }
@@ -514,7 +597,7 @@ nav .nav-item a:hover{
 .listing-carousel-button{
 	position: absolute;
 	top: 50%;
-	width: 80px;
+	width: 100px;
 	height: 50px;
 	line-height: 50px;
 	margin-top: -25px;
@@ -551,7 +634,7 @@ nav .nav-item a:hover{
 .testimonials-text {
 	padding: 75px 50px 75px;
 	overflow:hidden;
-	background: #f5f6fa;
+	background: #e4e6ee;
 	border:1ps solid #f1f1f1;
 	border-radius: 10px;
 	transition: all .3s ease-in-out;
@@ -679,7 +762,6 @@ nav .nav-item a:hover{
 
 
 
-
 /* ---------------contact form-------------- */
 
 
@@ -755,19 +837,19 @@ nav .nav-item a:hover{
       margin-top: 5%;
   }
 
-.contact-body{
+  .contact-body{
     max-width:1320px;
 
     padding: 0 1rem;
     }
 
 
-    .contact-info{
+  .contact-info{
     margin:2rem 0;
     text-align:center;
     padding:2rem 0;
     }
-    .contact-info span{
+  .contact-info span{
     display:block;
     }
     .contact-info div{
@@ -776,12 +858,12 @@ nav .nav-item a:hover{
     }
 
 
-    .contact-info span .fa{
+  .contact-info span .fa{
     font-size:30px;
     padding-bottom:0.9rem;
     color:#30649C;
     }
-    .contact-info div span:nth-child(2){
+  .contact-info div span:nth-child(2){
     font-weight:500;
     font-size:1.1rem;
 
@@ -1014,7 +1096,216 @@ nav .nav-item a:hover{
     padding-top: 250px;
 }
 
-/* end of footer ------------------------------------------------------------------------------------------------------------------------------------------------------------------------/*
+/* end of footer
 
 
 
+
+/* ishan ----- manisha --------------------------------------------------------------------------------------------------------------------------- */
+/*
+/* materials home, get_course_category and course page */
+
+*{
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.view_item img{
+	width: 100px;
+	height:100px
+}
+
+.wrapper{
+	width: 1000px;
+	margin: 20px auto;
+}
+
+.links{
+	margin-bottom: 25px;
+	color: #b3b9b9;
+	background: #fff;
+	padding: 15px ;
+	border-radius: 3px;
+	height:150px;
+	display: flex;
+	align-items:flex-end;
+	justify-content:center
+}
+
+.links ul{
+	display: flex;
+}
+
+.links ul li{
+	margin: 0 15px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 20px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+
+}
+
+.links ul li:hover,
+.links ul li.active{
+	color: black;
+}
+
+.view_main{
+	background: #fff;
+	border-radius: 3px;
+	padding: 15px;
+}
+
+.list-view .view_item {
+	background: #fff;
+	border: 1px solid #e2efe1;
+	margin: 10px;
+	padding: 10px 20px;
+	display: flex;
+	align-items: center;
+}
+
+.list-view .view_item:last-child{
+	margin-bottom: 0;
+}
+
+.list-view .view_item .vi_left{
+	margin-right: 25px;
+}
+
+.view_item .title{
+	font-weight: 600;
+}
+
+.view_item .content{
+	margin: 5px 0;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 400;
+}
+
+.view_item .btn{
+	background: #30649C;
+	padding: 5px 10px
+	border-radius: 3px;
+	color: #fff;
+	text-align: center;
+
+	font-weight: 700;
+	cursor: pointer;
+
+	font-size:11px
+}
+
+.view_item .btn:hover{
+	background: #000;
+}
+
+.grid-view{
+	width: 100%;
+
+}
+
+.grid-view .view_item {
+    height:410px;
+	display: inline-block;
+    border: 1px solid #e2efe1;
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+
+}
+
+.grid-view .view_item .vi_left{
+	margin-bottom: 10px;
+}
+
+.grid-view .view_item .btn{
+	margin: 0 auto;
+}
+
+.content-content{height:140px;
+overflow:hidden;
+padding:0 25px}
+
+.content{overflow:hidden;
+display:-webkit-box;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:5
+}
+
+.grid-view .view_item .vi_left img {width:240px;
+height:170px;
+}
+
+
+.bottom-CE{
+display:flex;
+ justify-content:space-between;
+}
+
+
+
+.types{padding-top:0.1px}
+.searchh{padding:15px}
+ol, ul {
+    padding-left: 0rem;
+}
+
+.serch{}
+::placeholder {
+  color: black}
+
+  .boxx{
+
+	width: 100%;
+	height: 50px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	border: 1px solid rgb(218, 220, 224);
+
+}
+
+
+#id_course_name_contain{
+	flex: 1;
+	width:1270px;
+	height: 40px;
+	border: none;
+	outline: none;
+	font-size: 16px;
+}
+
+#id_course_name_contain:focus{border: 0;
+    outline: 0;
+
+    box-shadow:none
+
+}
+
+
+.boxx > input{
+	flex: 1;
+	height: 40px;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	padding-left: 20px;
+
+
+}
+
+
+a.btn.btn-sm.btn-primary{display:none}
+#myButton > div > label{display:none}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------*/

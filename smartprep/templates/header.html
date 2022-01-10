@@ -1,4 +1,3 @@
-
 {% load static %}
 
 <nav class="navbar navsi navbar-expand-lg bg-light fixed-top">
@@ -9,16 +8,25 @@
           </button>
           <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0 ml-5">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Courses
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdow/aboutn-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+<!--              <li class="nav-item dropdown">-->
+<!--                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                  Courses-->
+<!--                </a>-->
+<!--                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--                  <li><a class="dropdown-item" href="#">Features</a></li>-->
+<!--                  <li><a class="dropdown-item" href="#">Courses</a></li>-->
+<!--                  <li><hr class="dropdow/aboutn-divider"></li>-->
+<!--                  <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+<!--                </ul>-->
+<!--              </li>-->
+
+              <li class="nav-item">
+                <a class="nav-link {{activate_home}}"  href="/materials/home/">Home</a>
+
+              </li>
+                <li class="nav-item">
+                <a class="nav-link {{activate_courses}}"  href="/materials/courses/">Courses</a>
+
               </li>
               <li class="nav-item">
                 <a class="nav-link {{activate_about}}"  href="/about">About</a>
@@ -34,8 +42,9 @@
               <a  href="/logout">
                  <button type="button" class="button">LogOut</button>
 
-                {% else %}
+
               </a>
+                 {% else %}
               <a  href="/RegisterForm">
                  <button type="button" class="button">Sign Up</button>
 
@@ -53,4 +62,3 @@
           </div>
         </div>
       </nav>
-

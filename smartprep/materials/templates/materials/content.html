@@ -19,7 +19,6 @@
 }
 
 
-
 .view_item img{
 	width: 100px;
 	height:100px
@@ -34,13 +33,18 @@
 	margin-bottom: 25px;
 	color: #b3b9b9;
 	background: #fff;
-	padding: 15px;
+	padding: 15px ;
 	border-radius: 3px;
+	height:150px;
+	display: flex;
+	align-items:flex-end;
+
 }
 
 .links ul{
 	display: flex;
-	justify-content: center;
+<!--	justify-content: center;-->
+    float:left
 }
 
 .links ul li{
@@ -54,7 +58,7 @@
 
 .links ul li:hover,
 .links ul li.active{
-	color: #30649C;
+	color: black;
 }
 
 .view_main{
@@ -157,26 +161,68 @@ display:flex;
  justify-content:space-between;
 }
 
+
+
+.types{padding-top:0.1px}
+.searchh{padding:15px}
+ol, ul {
+    padding-left: 0rem;
+}
+
+.serch{padding:0 15px}
+::placeholder {
+  color: black}
+
+  .box{
+
+	width: 100%;
+	height: 50px;
+	background-color: white;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	border: 1px solid rgb(218, 220, 224);
+
+}
+
+.box > input{
+	flex: 1;
+	height: 40px;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	padding-left: 10px;
+
+
+}
 </style>
 
 <!-- ----------our Course-------- -->
 
-<div class="types mt-5 p-5">
-    <h1 class="heading1">
-        <span>O</span>
-        <span>U</span>
-        <span>R</span>
-        <span class="space"></span>
-        <span>C</span>
-        <span>O</span>
-        <span>U</span>
-        <span>R</span>
-        <span>S</span>
-        <span>E</span>
-        <span>S</span>
-    </h1>
+<div class="types mt-5 " style="background-color:white">
+<!--    <h1 class="heading1">-->
+<!--        <span>O</span>-->
+<!--        <span>U</span>-->
+<!--        <span>R</span>-->
+<!--        <span class="space"></span>-->
+<!--        <span>C</span>-->
+<!--        <span>O</span>-->
+<!--        <span>U</span>-->
+<!--        <span>R</span>-->
+<!--        <span>S</span>-->
+<!--        <span>E</span>-->
+<!--        <span>S</span>-->
+<!--    </h1>-->
     <div class="wrapper">
-        <div class="links">
+        <div class="serch">
+        <div class="boxx" style="margin: auto;">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        <input autocomplete="off" placeholder="Search Courses" aria-label="Search" class="sc-irKDMX fyRspk"  align="center" id="myButton" value="">
+        </div>
+        </div>
+
+        <div class="links pt-5">
             <ul>
                 <li data-view="grid-view" class="li-grid">
                     <i class="fas fa-th-large"></i>
@@ -204,7 +250,7 @@ display:flex;
                         </div>
 
                         <div class="bottom-CE">
-                            <span class="btn"> Explore > </span>
+                            <span class="btn" ><a href="/materials/get_course_category/{{i.id}}" style="text-decoration:none; color:white"> Explore > </a></span>
                         </div>
                     </div>
                 </div>
@@ -227,7 +273,7 @@ display:flex;
                         -webkit-box-orient:vertical;
                         -webkit-line-clamp:2">
                             {{j.course_Description}}</p>
-                        <div class="btn">Explore ></div>
+                        <div class="btn"> Explore ></div>
                     </div>
                 </div>
                  {% endfor %}
@@ -267,4 +313,10 @@ display:flex;
         })
 
     </script>
+
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "/materials/courses/";
+    };
+</script>
     {% endblock main_content %}

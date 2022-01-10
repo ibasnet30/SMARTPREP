@@ -10,170 +10,58 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
 
-*{
-	list-style: none;
-	font-family: 'Montserrat', sans-serif;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-
-
-.view_item img{
-	width: 100px;
-	height:100px
-}
-
-.wrapper{
-	width: 1000px;
-	margin: 20px auto;
-}
-
-.links{
-	margin-bottom: 25px;
-	color: #b3b9b9;
-	background: #fff;
-	padding: 100px 15px 0 25px;
-	border-radius: 3px;
-
-	height:130px
-}
-
-.links ul{
-	display: flex;
-	float:right
-}
-
-.explore-courses{margin: 0 15px;
-	font-weight: 600;
-	color:black;
-	font-size: 18px;
-	cursor: pointer;}
-
-.links ul li{
-	margin: 0 15px;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	font-size: 18px;
-	cursor: pointer;
-}
-
-.links ul li:hover,
-.links ul li.active{
-	color: #30649C;
-}
-
-.view_main{
-	background: #fff;
-	padding: 15px;
-	border-color: red;
-}
-
-.list-view .view_item {
-	background: #fff;
-	border: 1px solid #e2efe1;
-	margin: 10px;
-	padding: 10px 20px;
-	display: flex;
-	align-items: center;
-}
-
-
-
-.list-view .view_item:hover{background-color:#F4F5F6;}
-.list-view .view_item:last-child{
-	margin-bottom: 0;
-}
-
-.list-view .view_item .vi_left{
-	margin-right: 25px;
-}
-
-.view_item .title{
-	font-weight: 600;
-}
-
-.view_item .content{
-	margin: 5px 0;
-	font-size: 14px;
-	line-height: 22px;
-	font-weight: 400;
-}
-
-.view_item .btn{
-	background: #30649C;
-	padding: 5px 10px
-	border-radius: 3px;
-	color: #fff;
-	text-align: center;
-
-	font-weight: 700;
-	cursor: pointer;
-
-	font-size:11px
-}
-
-.view_item .btn:hover{
-	background: #000;
-}
-
-.grid-view{
-	width: 100%;
-
-}
-
-.grid-view .view_item {
-    height:410px;
-	display: inline-block;
-    border: 1px solid #e2efe1;
-    width: 300px;
-    padding: 10px;
-    text-align: center;
-    margin: 10px;
-
-}
-
-.grid-view .view_item .vi_left{
-	margin-bottom: 10px;
-}
-
-.grid-view .view_item .btn{
-	margin: 0 auto;
-}
-
-
-
-.content-content{height:140px;
-overflow:hidden;
-padding:0 25px}
-
-.content{overflow:hidden;
-display:-webkit-box;
--webkit-box-orient:vertical;
--webkit-line-clamp:5
-}
-
-
-
-
-.grid-view .view_item .vi_left img {width:240px;
-height:170px;
-}
-
-
-.bottom-CE{
-display:flex;
- justify-content:space-between;
-}
-
 </style>
 
 <!-- ----------our Course-------- -->
 
-<div class="types mt-5 p-5" style="background-color:white">
-    <h1 class="heading1">
+<div class="types mt-5  " style="background-color:white" >
+<!--     <div class="serch pt-3">-->
+<!--        <div class="box" style="margin: auto;">-->
+<!--            <a href="/materials/content/"><i class="fa fa-arrow-left" aria-hidden="true" ></i></a>-->
+<!--&lt;!&ndash;            <i class="fa fa-search" aria-hidden="true"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;replace with myButton&ndash;&gt;-->
+<!--            <input placeholder="" aria-label="Search" class="sc-irKDMX fyRspk"  align="center" name="searched" id="myButtonn" value="">-->
+<!--            <button class="btn" type="submit">Search</button>-->
+<!--            <span style="padding-right:15px"><i class="fa fa-search" aria-hidden="true"></i>-->
+<!--            </span>-->
+<!--            <span>-->
+<!--                <a href="/materials/content/"><i class="fa fa-times" aria-hidden="true"></i></a></span>-->
+<!--        </div>-->
+<!--        </div>-->
+
+
+    <div class="serch pt-2" style="position:fixed">
+        <div class="boxx" style="margin: auto;">
+            <a href="/materials/home/"><i class="fa fa-arrow-left" aria-hidden="true" ></i></a>
+<!--            <i class="fa fa-search" aria-hidden="true"></i>-->
+
+<!--            <input placeholder="" aria-label="Search" class="sc-irKDMX fyRspk"  align="center" name="searched" id="myButton" value="">-->
+            <form class="sc-irKDMX fyRspk"  id="myButton" method="get" >
+                                {{user_course_filter.form | bootstrap_horizontal}} <a class="btn btn-sm  btn-primary" type="submit">Search</a>
+                            </form>
+<!--            <button class="btn" type="submit">Search</button>-->
+            <span style="padding-right:15px"><i class="fa fa-search" aria-hidden="true"></i>
+            </span>
+            <span>
+                <a href="/materials/home/"><i class="fa fa-times" aria-hidden="true"></i></a></span>
+        </div>
+        </div>
+
+<!--    <h1 class="heading1">-->
+<!--        <span>O</span>-->
+<!--        <span>U</span>-->
+<!--        <span>R</span>-->
+<!--        <span class="space"></span>-->
+<!--        <span>C</span>-->
+<!--        <span>O</span>-->
+<!--        <span>U</span>-->
+<!--        <span>R</span>-->
+<!--        <span>S</span>-->
+<!--        <span>E</span>-->
+<!--        <span>S</span>-->
+<!--    </h1>-->
+    <div class="wrapper pt-5">
+            <h1 class="heading1">
         <span>O</span>
         <span>U</span>
         <span>R</span>
@@ -186,19 +74,13 @@ display:flex;
         <span>E</span>
         <span>S</span>
     </h1>
-   <div class="wrapper">
-
-
         <div class="links">
-            <span class="explore-courses ">
-
-
-                Explore Courses</span>
             <ul>
                 <li data-view="grid-view" class="li-grid">
                     <i class="fas fa-th-large"></i>
 
                 </li>
+
                  <li data-view="list-view" class="li-list active">
                     <i class="fas fa-th-list"></i>
 
@@ -206,32 +88,31 @@ display:flex;
             </ul>
         </div>
         <div class="view_main">
-
-            <div class="view_wrap grid-view" style="display: none;">
+              <div class="view_wrap grid-view" style="display: none;">
 
                 {% for i in course_material %}
                 <div class="view_item">
                     <div class="vi_left">
-                        <img src="/{{i.course_Image}}" alt="Relevant Image">
+                        <img src="/{{i.course_Image}}" alt="strawberry">
                     </div>
                     <div class="vi_right" style="height:200px">
-                        <p class="title">{{i.course_Name}}</p>
+                        <p class="title" style="text-overflow:ellipsis;
+overflow:hidden">{{i.course_Name}}</p>
                         <div class="content-content">
                         <p class="content"   style="  text-align: justify; color:black">{{i.course_Description}}</p>
                         </div>
-
-                        <div class="bottom-CE">
-                            <span class="btn"> Explore > </span>
-                        </div>
+                        <div class="btn">Explore ></div>
                     </div>
                 </div>
                 {% endfor %}
 
             </div>
 
+
+
              <div class="view_wrap list-view" style="display: block;">
 
-                 {%for i in course_material %}
+                {% for i in course_material %}
                 <div class="view_item">
                     <div class="vi_left">
                         <img src="/{{i.course_Image}}" alt="Relevant Image">
@@ -282,4 +163,15 @@ display:flex;
         })
 
     </script>
+
+<script>
+    const inpText=document.getElementById("id_course_name_contain");
+    setTimeout(()=>{
+    inpText.focus();
+        }, 0);
+
+
+</script>
+
+
     {% endblock main_content %}

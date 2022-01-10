@@ -4,9 +4,9 @@ from materials import views
 urlpatterns = [
 
    # path('home', views.content2),
-    path('content/', views.content),
-    path('courses/', views.courses),
-    path('categories/', views.categories)
+    path('home/', views.home),
+    path('courses/', views.course),
+    path('get_course_category/<int:categories_id>', views.get_course_category)
     # path('content/', views.content2)
 
 ]

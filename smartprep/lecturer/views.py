@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from materials.forms import  CoursesForm, LecturesForm
-from materials.models import  Courses, Lectures
+from materials.models import Courses, Lectures, Categories
 
 
 def lecturer_dashboard(request):

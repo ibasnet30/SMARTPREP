@@ -6,8 +6,9 @@ urlpatterns = [
     path('course_form/', views.courses_form),
     path('get_course/', views.get_course),
     path('lecture_form/', views.lectures_form),
-    path('get_lecture/', views.get_lecture)
+    path('get_lecture/', views.get_lecture),
+
+
 
 ]
-
 

@@ -12,6 +12,15 @@ from materials.models import Categories, Courses, Lectures
 def admin_dashboard(request):
     return render(request, 'admins/admin_dashboard.html')
 
+def form(request):
+    return render(request, 'admins/form.html')
+
+def show_course(request):
+    return render(request, 'admins/show_course.html')
+
+def show_contact(request):
+    return render(request, 'admins/show_contact.html')
+
 
 # retrieving category form
 def categories_form(request):
@@ -37,8 +46,18 @@ def get_category(request):
 
     context={
         'category':category,
+        'activate_category_admin':'active'
     }
     return render(request, 'admins/get_category.html', context)
+
+
+
+#deleting category
+def delete_category(request, categories_id):
+    category=Categories.objects.get(id=categories_id)
+    category.delete()
+    messages.add_message(request, messages.SUCCESS, 'Category Deleted!')
+    return redirect('/admins/get_category/')
 
 #
 #
