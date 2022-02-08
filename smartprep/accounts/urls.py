@@ -10,7 +10,7 @@ urlpatterns=[
     path('RegisterForm/', views.register_user),
     path('logout', views.logout_user),
     # path('registerr', views.register),
-    path('profilee/', views.profilee ),
+    path('profile/', views.profilee ),
     path('form/', views.form),
     path('password_change/', views.password_change),
     path('settings/', views.setting)

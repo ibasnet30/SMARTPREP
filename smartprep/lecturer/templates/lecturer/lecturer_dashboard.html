@@ -1,7 +1,7 @@
-{% extends 'admin-layout.html' %}
+{% extends 'lecturer-layout.html' %}
 {% load static %}
 {% block title %}
-<title>Admin-Dashboard</title>
+<title>Lecturer-Dashboard</title>
 {% endblock %}
 {% block main_content %}
 <div class="main1">
@@ -28,10 +28,10 @@
                     <!-- user img-->
                     <div class="user">
 
-                        <img src = "{% static 'images/user.jpg' %}" alt = "" width="40px" height="40px">
+                        <img src="/{{request.user.profile.profile_pic}}"  alt = "" width="40px" height="40px">
                         <div>
-                            <h4>Sanju Maharjan</h4>
-                        <p style="color:gray;">Admin</p>
+                            <h4>{{user.username}}</h4>
+                        <p style="color:gray;">Instructor</p>
 
                         </div>
 
