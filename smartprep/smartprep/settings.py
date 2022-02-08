@@ -11,8 +11,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
-
+from flask_ckeditor import CKEditor, CKEditorField
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from flask import Flask
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -27,10 +29,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+# app = Flask(__name__)
+# ckeditor = CKEditor(app)
 # Application definition
 
 INSTALLED_APPS = [
+    'ckeditor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,7 +44,10 @@ INSTALLED_APPS = [
     'admins.apps.AdminsConfig',
     'accounts.apps.AccountsConfig',
     'materials.apps.MaterialsConfig',
-    'bootstrapform'
+    'lecturer.apps.LecturerConfig',
+    'bootstrapform',
+    'tinymce',
+
 ]
 
 MIDDLEWARE = [
@@ -81,7 +88,7 @@ WSGI_APPLICATION = 'smartprep.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'smartprep',
+        'NAME': 'digibidhya',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
