@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'smartprep.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'digibidhya',
+        'NAME': 'd-bidhya',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',

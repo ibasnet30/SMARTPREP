@@ -1,5 +1,5 @@
 <style>
-    div.btn:hover {
+    .btn:hover {
     color: white
 }
 </style>
@@ -15,12 +15,197 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
 
+*{
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
+
+.view_item img{
+	width: 100px;
+	height:100px
+}
+
+.wrapper{
+	width: 1000px;
+	margin: 20px auto;
+}
+
+.links{
+	margin-bottom: 25px;
+	color: #b3b9b9;
+	background: #fff;
+	padding: 15px ;
+	border-radius: 3px;
+	height:150px;
+	display: flex;
+	align-items:flex-end;
+
+}
+
+.links ul{
+	display: flex;
+<!--	justify-content: center;-->
+    float:left
+}
+
+.links ul li{
+	margin: 0 15px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.links ul li:hover,
+.links ul li.active{
+	color: black;
+}
+
+.view_main{
+	background: #fff;
+	border-radius: 3px;
+	padding: 15px;
+}
+
+.list-view .view_item {
+	background: #fff;
+	border: 1px solid #e2efe1;
+	margin: 10px;
+	padding: 10px 20px;
+	display: flex;
+	align-items: center;
+}
+
+.list-view .view_item:last-child{
+	margin-bottom: 0;
+}
+
+.list-view .view_item .vi_left{
+	margin-right: 25px;
+}
+
+.view_item .title{
+	font-weight: 600;
+}
+
+.view_item .content{
+	margin: 5px 0;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 400;
+}
+
+.view_item .btn{
+	background: #30649C;
+	padding: 5px 10px
+	border-radius: 3px;
+	color: #fff;
+	text-align: center;
+
+	font-weight: 700;
+	cursor: pointer;
+
+	font-size:11px
+}
+
+.view_item .btn:hover{
+	background: #000;
+}
+
+.grid-view{
+	width: 100%;
+
+}
+
+.grid-view .view_item {
+    height:410px;
+	display: inline-block;
+    border: 1px solid #e2efe1;
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+
+}
+
+.grid-view .view_item .vi_left{
+	margin-bottom: 10px;
+}
+
+.grid-view .view_item .btn{
+	margin: 0 auto;
+}
+
+
+
+.content-content{height:140px;
+overflow:hidden;
+padding:0 25px}
+
+.content{overflow:hidden;
+display:-webkit-box;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:5
+}
+
+
+
+
+.grid-view .view_item .vi_left img {width:240px;
+height:170px;
+}
+
+
+.bottom-CE{
+display:flex;
+ justify-content:space-between;
+}
+
+
+
+.types{padding-top:0.1px}
+.searchh{padding:15px}
+ol, ul {
+    padding-left: 0rem;
+}
+
+.serch{padding:0 15px}
+::placeholder {
+  color: black}
+
+  .box{
+
+	width: 100%;
+	height: 50px;
+	background-color: white;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	border: 1px solid rgb(218, 220, 224);
+
+}
+
+.box > input{
+	flex: 1;
+	height: 40px;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	padding-left: 10px;
+
+
+}
 </style>
 
 <!-- ----------our Course-------- -->
 
-<div class="types mt-5 " style="background-color:white" >
+<div class="types mt-5 " style="background-color:white">
 <!--    <h1 class="heading1">-->
 <!--        <span>O</span>-->
 <!--        <span>U</span>-->
@@ -36,7 +221,7 @@
 <!--    </h1>-->
     <div class="wrapper">
         <div class="serch">
-        <div class="box" style="margin: auto;">
+        <div class="boxx" style="margin: auto;">
             <i class="fa fa-search" aria-hidden="true"></i>
         <input autocomplete="off" placeholder="Search Courses" aria-label="Search" class="sc-irKDMX fyRspk"  align="center" id="myButton" value="">
         </div>
@@ -64,8 +249,7 @@
                         <img src="/{{i.category_Image}}" alt="Relevant Image">
                     </div>
                     <div class="vi_right" style="height:200px">
-                        <p class="title" style="text-overflow:ellipsis;
-overflow:hidden">{{i.category_Name}}</p>
+                        <p class="title">{{i.category_Name}}</p>
                         <div class="content-content">
                         <p class="content"   style="  text-align: justify; color:black">{{i.category_Description}}</p>
                         </div>
@@ -88,13 +272,13 @@ overflow:hidden">{{i.category_Name}}</p>
                         <img src="/{{j.course_Image}}" alt="Relevant Image">
                     </div>
                     <div class="vi_right">
-                        <p class="title">{{j.coursez_Name}}</p>
+                        <p class="title">{{j.course_Name}}</p>
                         <p class="content" style="overflow:hidden;
                         display:-webkit-box;
                         -webkit-box-orient:vertical;
                         -webkit-line-clamp:2">
                             {{j.course_Description}}</p>
-                        <div class="btn"> Explore ></div>
+                        <div class="btn">Explore ></div>
                     </div>
                 </div>
                  {% endfor %}
