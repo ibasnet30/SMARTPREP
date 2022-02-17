@@ -770,7 +770,7 @@ form .button-area{
   border-radius: 5px;
   padding: 13px 25px;
   background: #30649C;
-  transition: background 0.3s ease;
+  transition:  0.3s ease;
 }
 .button-area button:hover{
   background: #025ce3;
@@ -878,3 +878,7 @@ text-decoration:none}
 
 #category_Name:hover{color:blue;
 text-decoration:none}
+
+#get_category_image{width:100px;
+height:100px;}
+.eachrow{height:120px}

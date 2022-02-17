@@ -1,7 +1,7 @@
 {% extends 'lecturer-layout.html' %}
 {% load bootstrap %}
 {% block title %}
-    <title>Add Course</title>
+    <title>Update Lecture</title>
 {% endblock %}
 
 {% block main_content %}
@@ -27,7 +27,7 @@
                     <div class="user">
                         <div>
                             <h4>{{user.username}}</h4>
-                        <p style="color:gray;"></p>
+                        <p style="color:gray;">Instructor</p>
                         </div>
                     </div>
                 </div>
@@ -39,13 +39,13 @@
                     <div class="container d-flex p-5">
                         <div class="row">
                             <div class="col-md-6 offset-md-3" >
-                                <h4 id="head4" class="text-center">Add Course</h4>
+                                <h4 id="head4" class="text-center">Update Category</h4>
                                 <div class="card py-2 px-2" style="display:flex; justify-content:center">
                                     <form class="myForm" action="" method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form_course | bootstrap_horizontal }}
-            <button type="submit" class="btn btn-primary mt-3">Submit</button>
-        </form>
+                                        {% csrf_token %}
+                                        {{ form_lecture_update | bootstrap_horizontal }}
+                                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -68,17 +68,3 @@
 </script>
 
 {% endblock  %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-

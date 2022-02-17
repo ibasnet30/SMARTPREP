@@ -1,15 +1,16 @@
 {% extends 'admin-layout.html' %}
-{% load static %}
+{% load bootstrap %}
 {% block title %}
-<title>Admin-Dashboard</title>
+    <title>Add Category</title>
 {% endblock %}
+
 {% block main_content %}
-<div class="main1">
+
+<div class="main1" id="menu-toggle">
             <div class="main2">
                 <div class="topbar">
                     <div class="toogle1">
                         <ion-icon name="menu-outline"></ion-icon>
-
                     </div>
                     <!-- search -->
                     <div class="search">
@@ -18,215 +19,52 @@
                             <ion-icon name="search-outline"></ion-icon>
                         </label>
                     </div>
-
                     <!-----notification-->
                     <div class="notification">
                         <ion-icon name="notifications-outline"></ion-icon>
-
                     </div>
-
                     <!-- user img-->
                     <div class="user">
-
-                        <img src = "{% static 'images/user.jpg' %}" alt = "" width="40px" height="40px">
                         <div>
                             <h4>Sanju Maharjan</h4>
                         <p style="color:gray;">Admin</p>
-
                         </div>
-
-
-
-
                     </div>
                 </div>
-
             </div>
 
-        <!-- </div> -->
-        <!-- heading -->
-        <h1 style="margin:2%;" class="heading">Dashboard</h1>
-
-          <!-- card -->
-
-        <div class="cardBox">
-            <div class="card">
-                <div>
-                    <div class="numbers">1,504</div>
-                    <div class="cardName">Total Pending </div>
+        <div class="cardBox_categoryForm">
+            <div class="details_categoryForm">
+                <div class="get_categoryForm">
+                    <div class="container d-flex p-5">
+                        <div class="row">
+                            <div class="col-md-6 offset-md-3" >
+                                <h4 id="head4" class="text-center">Add Category</h4>
+                                <div class="card py-2 px-2" style="display:flex; justify-content:center">
+                                    <form class="myForm" action="" method="POST" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        {{ form_category | bootstrap_horizontal }}
+                                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="iconBx">
-                    <ion-icon name="timer-outline"></ion-icon>
-                </div>
-            </div>
-
-
-
-            <div class="card">
-                <div>
-                    <div class="numbers">103</div>
-                    <div class="cardName">Total Users</div>
-                </div>
-                <div style="color:#ffc233;background:#ffe8b3;" class="iconBx">
-                    <ion-icon name="people-outline"></ion-icon>
-                </div>
-            </div>
-
-            <div class="card">
-                <div>
-                    <div class="numbers">17</div>
-                    <div class="cardName">Total Orders</div>
-                </div>
-                <div style="color:#e05260;background:#f7d4d7;"  class="iconBx">
-                    <ion-icon name="cube-outline"></ion-icon>
-                </div>
-            </div>
-
-            <div class="card">
-                <div>
-                    <div class="numbers">1,777</div>
-                    <div class="cardName">Total Sales</div>
-                </div>
-                <div style="background:#C0F2D8;color:#2BD47D;" class="iconBx">
-                    <ion-icon name="analytics-outline"></ion-icon>
-                </div>
-            </div>
-
-
-        </div>
-
-
-
-
-        <!-- data list -->
-        <div class="details">
-            <div class="recentOrders">
-                <div class="cardHeader">
-                    <h2>Recent Orders</h2>
-                    <a href="#" class="btn">View All</a>
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <td>Name</td>
-                            <td>Price</td>
-                            <td>Payment</td>
-                            <td>Status</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Python</td>
-                            <td>$1200</td>
-                            <td>Paid</td>
-                            <td><span class="statusdelivered ">Deliverd</span></td>
-                        </tr>
-
-                        <tr>
-                            <td>Java</td>
-                            <td>$1200</td>
-                            <td>Paid</td>
-                            <td><span class="statuspending">Pending</span></td>
-                        </tr>
-                        <tr>
-                            <td>Html</td>
-                            <td>$1200</td>
-                            <td>Paid</td>
-                            <td><span class="statusreturn">Return</span></td>
-                        </tr>
-
-                        <tr>
-                            <td>Javascript</td>
-                            <td>$1200</td>
-                            <td>Paid</td>
-                            <td><span class="statuspending" deliverd>Pending</span></td>
-                        </tr>
-
-                        <tr>
-                            <td>Django</td>
-                            <td>$1200</td>
-                            <td>Paid</td>
-                            <td><span class="statusdelivered">Deliverd</span></td>
-                        </tr>
-                        <tr>
-                            <td>React</td>
-                            <td>$1200</td>
-                            <td>Paid</td>
-                            <td><span class="statusreturn">Return</span></td>
-                        </tr>
-                        <tr>
-                            <td>Css</td>
-                            <td>$1200</td>
-                            <td>Paid</td>
-                            <td><span class="statuspending">Pending</span></td>
-                        </tr>
-
-                        <tr>
-                            <td>Jquery</td>
-                            <td>$1200</td>
-                            <td>Paid</td>
-                            <td><span class="statusdelivered">Deliverd</span></td>
-                        </tr>
-
-                        <tr>
-                            <td>C++</td>
-                            <td>$1200</td>
-                            <td>UnPaid</td>
-                            <td><span class="statuspending">Pending</span></td>
-                        </tr>
-
-                    </tbody>
-                </table>
-
-            </div>
-
-
-            <!-- new customers -->
-
-            <div class="recentCustomers">
-                <div class="cardHeader">
-                    <h2> Recent Customers</h2>
-                </div>
-                <table>
-                    <td width="60px"><div class="imgBx" ><img src="{% static 'images/user.jpg' %}"></div></td>
-                    <td><h4>Sanju Maharjan<br><span>Lalitpur,Nepal</span></h4></td>
-                </table>
-                <table>
-                    <td width="60px"><div class="imgBx" ><img src="{% static 'images/user.jpg' %}"></div></td>
-                    <td><h4>Sanju Maharjan<br><span>Lalitpur,Nepal</span></h4></td>
-                </table>
-                <table>
-                    <td width="60px"><div class="imgBx" ><img src="{% static 'images/user.jpg' %}"></div></td>
-                    <td><h4>Sanju Maharjan<br><span>Lalitpur,Nepal</span></h4></td>
-                </table>
-                <table>
-                    <td width="60px"><div class="imgBx" ><img src="{% static 'images/user.jpg' %}"></div></td>
-                    <td><h4>Sanju Maharjan<br><span>Lalitpur,Nepal</span></h4></td>
-                </table>
-                <table>
-                    <td width="60px"><div class="imgBx" ><img src="{% static 'images/user.jpg' %}"></div></td>
-                    <td><h4>Sanju Maharjan<br><span>Lalitpur,Nepal</span></h4></td>
-                </table>
-                <table>
-                    <td width="60px"><div class="imgBx" ><img src="{% static 'images/user.jpg' %}"></div></td>
-                    <td><h4>Sanju Maharjan<br><span>Lalitpur,Nepal</span></h4></td>
-                </table>
-
-
-
             </div>
         </div>
-
-        </div>
-    </div>
+</div>
 
 
-
-
-
+<script>
+    var form_fields = document.getElementsByTagName('input')
+    form_fields[1].placeholder = "Enter category
 
 
 
+   for(field in form_fields){
+   form_fields[field].className += ' my-3'
+   }
+</script>
 
-
-{% endblock %}
+{% endblock  %}

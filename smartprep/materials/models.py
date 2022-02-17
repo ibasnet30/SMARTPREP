@@ -28,7 +28,7 @@ class Courses(models.Model):
                                             null=True, max_length=3000)
     course_Image = models.FileField(upload_to='static/uploaded_Files')
     course_Time=models.CharField(max_length=40, null=True)
-    course_Level=models.ForeignKey(Levels, null=True,on_delete=models.CASCADE)
+
     # user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     def __str__(self):
         return self.course_Name
@@ -45,7 +45,12 @@ class Lectures(models.Model):
         return self.lecture_Name
 
 
-class Reviews(models.Model):
-    course=models.ForeignKey(Courses, on_delete=models.CASCADE)
+
+
+class Comments(models.Model):
     user=models.ForeignKey(User, on_delete=models.CASCADE)
+    course = models.ForeignKey(Courses, on_delete=models.CASCADE)
+    content=models.TextField(max_length=250)
     created_Date=models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return str(self.content)

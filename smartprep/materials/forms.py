@@ -1,7 +1,6 @@
 from django import forms
 from  django.forms import ModelForm
-from .models import Categories, Courses, Lectures
-
+from .models import Categories, Courses, Lectures, Comments
 
 
 class CategoriesForm(ModelForm):
@@ -21,6 +20,11 @@ class LecturesForm(ModelForm):
         model=Lectures
         fields = "__all__"
 
+
+class CommentForm(ModelForm):
+    class Meta:
+        model=Comments
+        fields=['content']
 
 
 

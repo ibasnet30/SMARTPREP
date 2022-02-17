@@ -879,6 +879,9 @@ text-decoration:none}
 #category_Name:hover{color:blue;
 text-decoration:none}
 
+.table th, tr{height:50px}
+
+
 /* --------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*ishan */
@@ -886,3 +889,8 @@ text-decoration:none}
 .setting1Components{color:black;
 text-decoration:none}
 .setting1Components:hover{color:blue}
+
+
+#get_course_image{width:100px;
+height:100px;}
+.eachrow{height:120px}

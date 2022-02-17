@@ -64,24 +64,24 @@
                     <a href="/admins/category_form/" class="btn"><i class="fa fa-plus" aria-hidden="true"></i> Add New</a>
                 </div>
                 <table class=" table"  >
-                    <tr class="col " >
+                    <tr style="text-align:center" >
 <!--                        <th>Picture</th>-->
-                         <th class="col py-3 " style="text-align:left">Image</th>
-                        <th class="col py-3 ">Category</th>
+                         <th class=" ">Image</th>
+                        <th class="">Category</th>
                        <th  colspan="2" >Action</th>
 
                     </tr>
                     {% for i in category %}
-                    <tr class="" style="height:120px">
-                        <td  > <img class="imagess" style="width:100px; height:100px; " src="/{{i.category_Image}}"   ></td>
-                        <td style="text-align:center"><a  id="category_Name" href="/admins/category_update_form/{{i.id}}">{{ i.category_Name }}</a></td>
+                    <tr style="text-align:center" >
+                        <td  > <img class="imagess" id="get_category_image" src="/{{i.category_Image}}"  ></td>
+                        <td class="text-center"><a  id="category_Name" href="/admins/category_update_form/{{i.id}}">{{ i.category_Name }}</a></td>
 
 
+                        <td  ><a class="btn btn-danger btn-sm" href="/admins/delete_category/{{i.id}}"
+                               onclick="return confirm('Are you sure to delete the {{i.category_Name}}')">Delete</a>
+                            <a class="btn btn-danger btn-sm" href="/admins/category_update_form/{{i.id}}"
+                               >Edit</a>&nbsp;</td>
 
-
-
-                        <td style="text-align:center"><a class="btn btn-danger btn-sm" href="/admins/delete_category/{{i.id}}"
-                               onclick="return confirm('Are you sure to delete the {{i.category_Name}}')">Delete</a> &nbsp;</td>
 
 <!--                        <td style="text-align:center"><a class="btn btn-danger btn-sm" href="/admins/category_update_form/{{i.id}}"-->
 <!--                               >Update</a></td>-->

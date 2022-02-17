@@ -334,38 +334,6 @@ height:260px}
 				<hr>
 
 			<div class="ratebox">
-				<div class="reviews">
-					<span class="fa fa-star checked"></span>
-					<span class="fa fa-star checked"></span>
-					<span class="fa fa-star checked"></span>
-					<span class="fa fa-star checked"></span>
-					<span class="fa fa-star"></span>&nbsp; By CS. 2019 Dec
-
-					<style type="text/css">
-						.checked {
-								color: orange;
-						}
-
-					</style>
-					<p>An ok course for beginners. A bit too basic for someone who has already had experience in design, but is great anyway cause it breaks things back down to the simplest parts to help you remember roots.</p>
-
-				</div>
-				<div class="reviews">
-					<span class="fa fa-star checked"></span>
-					<span class="fa fa-star checked"></span>
-					<span class="fa fa-star checked"></span>
-					<span class="fa fa-star checked"></span>
-					<span class="fa fa-star"></span>&nbsp; By CS. 2019 Dec
-
-					<style type="text/css">
-						.checked {
-								color: orange;
-						}
-
-					</style>
-					<p>An ok course for beginners. A bit too basic for someone who has already had experience in design, but is great anyway cause it breaks things back down to the simplest parts to help you remember roots.</p>
-
-				</div>
 
 				<div class="reviews">
 					<span class="fa fa-star checked"></span>
@@ -396,41 +364,32 @@ height:260px}
 						}
 
 					</style>
-					<p>An ok course for beginners. A bit too basic for someone who has already had experience in design, but is great anyway cause it breaks things back down to the simplest parts to help you remember roots.</p>
+
+					<form method="POST">
+						{% csrf_token %}
+						{{ comment_form.as_p }}
+						<input type="submit" value="Submit" class="btn btn-outline-success">
+
+					</form>
+					<div class="review-form">
+						{{comments.count}} Comments{{comments|pluralize}}
+						{% for comment in comments %}
+  							<blockquote class="blockquote">
+								<p class="mb-0">{{comment.content}}</p>
+								<footer class="blockquote-footer">
+									by
+
+										{{comment.user}}
+
+								</footer>
+
+	    					</blockquote>
+						{% endfor %}
+					</div>
+
 
 				</div>
-				<div class="reviews">
-					<span class="fa fa-star checked"></span>
-					<span class="fa fa-star checked"></span>
-					<span class="fa fa-star checked"></span>
-					<span class="fa fa-star checked"></span>
-					<span class="fa fa-star"></span>&nbsp; By CS. 2019 Dec
 
-					<style type="text/css">
-						.checked {
-								color: orange;
-						}
-
-					</style>
-					<p>An ok course for beginners. A bit too basic for someone who has already had experience in design, but is great anyway cause it breaks things back down to the simplest parts to help you remember roots.</p>
-
-				</div>
-				<div class="reviews">
-					<span class="fa fa-star checked"></span>
-					<span class="fa fa-star checked"></span>
-					<span class="fa fa-star checked"></span>
-					<span class="fa fa-star checked"></span>
-					<span class="fa fa-star"></span>&nbsp; By CS. 2019 Dec
-
-					<style type="text/css">
-						.checked {
-								color: orange;
-						}
-
-					</style>
-					<p>An ok course for beginners. A bit too basic for someone who has already had experience in design, but is great anyway cause it breaks things back down to the simplest parts to help you remember roots.</p>
-
-				</div>
 			</div>
 			<button class="btn2">See More</button>
 			<hr>

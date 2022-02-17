@@ -1,7 +1,7 @@
 {% extends 'admin-layout.html' %}
 {% load bootstrap %}
 {% block title %}
-    <title>Add Category</title>
+    <title>Update Category</title>
 {% endblock %}
 
 {% block main_content %}
@@ -26,7 +26,7 @@
                     <!-- user img-->
                     <div class="user">
                         <div>
-                            <h4>Sanju Maharjan</h4>
+                            <h4>user.username</h4>
                         <p style="color:gray;">Admin</p>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                     <div class="container d-flex p-5">
                         <div class="row">
                             <div class="col-md-6 offset-md-3" >
-                                <h4 id="head4" class="text-center">Add Category</h4>
+                                <h4 id="head4" class="text-center">Update Category</h4>
                                 <div class="card py-2 px-2" style="display:flex; justify-content:center">
                                     <form class="myForm" action="" method="POST" enctype="multipart/form-data">
                                         {% csrf_token %}

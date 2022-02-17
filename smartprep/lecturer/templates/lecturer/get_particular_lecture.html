@@ -1,7 +1,8 @@
+
 {% extends 'lecturer-layout.html' %}
 {% load static %}
 {% block title %}
-<title> All courses</title>
+<title> All lectures</title>
 {% endblock %}
 {% block main_content %}
 <div class="main1">
@@ -61,30 +62,25 @@
 
                 <div class="cardHeader">
                     <h2></h2>
-                    <a href="/lecturer/course_form/" class="btn"><i class="fa fa-plus" aria-hidden="true"></i> Add New</a>
+                    <a href="/lecturer/lecture_form/" class="btn"><i class="fa fa-plus" aria-hidden="true"></i> Add New</a>
                 </div>
                 <table class=" table"  style="text-align:left">
                     <tr  style="text-align:center">
 <!--                        <th>Picture</th>-->
-                         <th class="col py-3 " >Id</th>
-                        <th>Image</th>
-                        <th class="col py-3 ">Course</th>
-                        <th>Category</th>
-                       <th   colspan="">Action</th>
+                        <th>S.N</th>
+                        <th>Title</th>
+                       <th   class="text-center">Action</th>
 
                     </tr>
-                   {% for i in course %}
+                   {% for i in course.lectures_set.all %}
                     <tr style="text-align:center">
-                        <td >{{i.id}}</td>
-                        <td  > <img class="imagess" id="get_course_image" src="/{{i.course_Image}}"  ></td>
-                        <td><a href="/lecturer/get_particular_lecture/{{i.id}}"> {{ i.course_Name }}</a></td>
-                        <td>{{i.category}}</td>
-                         <td  ><a class="btn btn-danger btn-sm" href="/lecturer/delete_course/{{i.id}}"
-                               onclick="return confirm('Are you sure to delete the {{i.course_Name}}')">Delete</a>
-                            <a class="btn btn-danger btn-sm" href="/lecturer/course_update_form/{{i.id}}"
+                        <td>{{i.lecture_Number}}</td>
+                        <td> {{ i.lecture_Name }}</td>
+
+                            <td  ><a class="btn btn-danger btn-sm" href="/lecturer/delete_lecture/{{i.id}}"
+                               onclick="return confirm('Are you sure to delete the {{i.lecture_Name}}')">Delete</a>
+                            <a class="btn btn-danger btn-sm" href="/lecturer/lecture_update_form/{{i.id}}"
                                >Edit</a>&nbsp;</td>
-
-
 
 
 
@@ -115,8 +111,6 @@
 
 
 {% endblock %}
-
-
 
 
 

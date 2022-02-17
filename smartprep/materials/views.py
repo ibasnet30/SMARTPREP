@@ -4,11 +4,8 @@ from django.shortcuts import render
 # Create your views here.
 from accounts.auth import learner_only
 from materials.filters import CourseFilter, CatFilter
-from materials.models import Categories, Courses
-
-
-
-
+from materials.forms import CommentForm
+from materials.models import *
 
 
 @learner_only
@@ -47,11 +44,43 @@ def get_course_category(request,categories_id):
 
 # recently added courses
 
-
-#
 def courseDetail(request, courses_id):
     courseDetail=Courses.objects.get(id=courses_id)
+    comments = Comments.objects.filter(course_id=courses_id)
+
+    if request.method=='POST':
+        comment_form=CommentForm(request.POST or None)
+        if comment_form.is_valid():
+                content=request.POST.get('content')
+                comment=Comments.objects.create(course_id=courses_id, user=request.user, content=content)
+                comment.save()
+
+    else:
+        comment_form=CommentForm()
     context={
-        'course':courseDetail
-    }
+        'course':courseDetail,
+        'comments':comments,
+        'comment_form':comment_form
+        }
     return render(request, 'materials/courseDetail.html', context)
+
+
+#
+#
+# def courseDetail(request, id, slug):
+#     courseDetail = get_object_or_404(Courses, id=id, slug=slug)
+#     Comments = Comment.objects.filter(courseDetail=courseDetail)
+#
+#     if request.method=='POST':
+#         comment_form=CommentForm(request.POST or None)
+#         if comment_form.is_valid():
+#             comment_form.save()
+#     else:
+#         comment_form=CommentForm()
+#     context={
+#         'course':courseDetail,
+#         'comments':Comments,
+#         'comment_form':comment_form
+#     }
+#     return render(request, 'materials/courseDetail.html', context)
+#
