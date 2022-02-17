@@ -368,7 +368,11 @@ height:260px}
 					<form method="POST">
 						{% csrf_token %}
 						{{ comment_form.as_p }}
+						{% if request.user.is_authenticated %}
 						<input type="submit" value="Submit" class="btn btn-outline-success">
+						{% else %}
+						<input type="submit" value="Submit" class="btn btn-outline-success" disabled>
+						{% endif %}
 
 					</form>
 					<div class="review-form">
